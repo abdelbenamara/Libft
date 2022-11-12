@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/11/12 00:59:51 by abenamar         ###   ########.fr        #
+#    Updated: 2022/11/12 01:31:23 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = libft.a
 SRCS += ft_isalpha.c 
 SRCS += ft_isdigit.c 
 SRCS += ft_isalnum.c 
+SRCS += ft_isascii.c 
 
 OBJS = ${SRCS:.c=.o}
 
