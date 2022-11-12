@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/11 17:09:21 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/12 01:09:14 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
+void	ft_isalnum_test(void);
 
 int	main(void)
 {
@@ -26,5 +27,6 @@ int	main(void)
 	printf("-\t\t\t\t-\n");
 	ft_isalpha_test();
 	ft_isdigit_test();
+	ft_isalnum_test();
 	return (0);
 }

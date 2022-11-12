@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/11/11 18:54:29 by abenamar         ###   ########.fr        #
+#    Updated: 2022/11/12 01:07:58 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ LIB = ft
 
 SRCS += ft_isalpha_test.c 
 SRCS += ft_isdigit_test.c 
+SRCS += ft_isalnum_test.c 
 SRCS += test.c 
 
 OBJS = ${SRCS:.c=.o}
