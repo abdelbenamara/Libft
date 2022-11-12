@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 01:01:00 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/12 01:07:33 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/12 02:20:12 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,14 @@ void	ft_isalnum_test(void)
 	printf(BOLDGREEN "8. OK\t");
 	assert(ft_isalnum('5') != 0 && isalnum('5') != 0);
 	printf(BOLDGREEN "9. OK\t");
-	assert(ft_isalnum(224) == 0 && isalnum(224) == 0);
+	assert(ft_isalnum(-1) == 0 && isalnum(-1) == 0);
 	printf(BOLDGREEN "10. OK\t");
-	assert(ft_isalnum(216) == 0 && isalnum(216) == 0);
-	printf(BOLDGREEN "11. OK\t");
 	assert(ft_isalnum(' ') == 0 && isalnum(' ') == 0);
-	printf(BOLDGREEN "12. OK" RESET "\n");
+	printf(BOLDGREEN "11. OK\t");
+	assert(ft_isalnum('@') == 0 && isalnum('@') == 0);
+	printf(BOLDGREEN "12. OK\t");
+	assert(ft_isalnum(224) == 0 && isalnum(224) == 0);
+	printf(BOLDGREEN "13. OK\t");
+	assert(ft_isalnum(216) == 0 && isalnum(216) == 0);
+	printf(BOLDGREEN "14. OK" RESET "\n");
 }

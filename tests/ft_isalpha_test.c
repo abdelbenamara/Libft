@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/11 17:46:56 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/12 02:14:42 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,12 @@ void	ft_isalpha_test(void)
 	printf(BOLDGREEN "5. OK\t");
 	assert(ft_isalpha('m') != 0 && isalpha('m') != 0);
 	printf(BOLDGREEN "6. OK\t");
-	assert(ft_isalpha('1') == 0 && isalpha('1') == 0);
+	assert(ft_isalpha(-1) == 0 && isalpha(-1) == 0);
 	printf(BOLDGREEN "7. OK\t");
-	assert(ft_isalpha(224) == 0 && isalpha(224) == 0);
+	assert(ft_isalpha('1') == 0 && isalpha('1') == 0);
 	printf(BOLDGREEN "8. OK\t");
+	assert(ft_isalpha(224) == 0 && isalpha(224) == 0);
+	printf(BOLDGREEN "9. OK\t");
 	assert(ft_isalpha(' ') == 0 && isalpha(' ') == 0);
-	printf(BOLDGREEN "9. OK" RESET "\n");
+	printf(BOLDGREEN "10. OK" RESET "\n");
 }
