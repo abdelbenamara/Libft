@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/12 02:23:14 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/13 01:11:13 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_isdigit_test(void);
 void	ft_isalnum_test(void);
 void	ft_isascii_test(void);
 void	ft_isprint_test(void);
+void	ft_strlen_test(void);
 
 int	main(void)
 {
@@ -32,5 +33,6 @@ int	main(void)
 	ft_isalnum_test();
 	ft_isascii_test();
 	ft_isprint_test();
+	ft_strlen_test();
 	return (0);
 }
