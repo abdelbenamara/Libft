@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/11/12 02:00:13 by abenamar         ###   ########.fr        #
+#    Updated: 2022/11/13 00:48:22 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS += ft_isdigit.c
 SRCS += ft_isalnum.c 
 SRCS += ft_isascii.c 
 SRCS += ft_isprint.c 
+SRCS += ft_strlen.c
 
 OBJS = ${SRCS:.c=.o}
 
