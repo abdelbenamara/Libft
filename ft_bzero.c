@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 03:18:15 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/13 03:33:02 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/14 00:45:41 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	while (n-- > 0)
-		*(uint8_t *)s++ = 0;
+	if (s != NULL)
+		while (n-- > 0)
+			*(uint8_t *)s++ = 0;
 }
