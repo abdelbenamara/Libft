@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 03:33:21 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/13 03:48:47 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/15 01:27:05 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@
 
 void	ft_bzero_test(void)
 {
-	char	str1[14] = "This is a test";
-	char	str2[14] = "This is a test";
+	char	str1[15] = "This is a test";
+	char	str2[15] = "This is a test";
 
 	printf("ft_bzero\t\t\t");
-	ft_bzero(str1 + 14, 0 * sizeof(char));
-	bzero(str2 + 14, 0 * sizeof(char));
+	ft_bzero(str1 + 15, 0 * sizeof(char));
+	bzero(str2 + 15, 0 * sizeof(char));
 	assert(!strcmp(str1, str2));
 	printf(BOLDGREEN "1. OK\t");
-	ft_bzero(str1 + 13, 1 * sizeof(char));
-	bzero(str2 + 13, 1 * sizeof(char));
+	ft_bzero(str1 + 14, 1 * sizeof(char));
+	bzero(str2 + 14, 1 * sizeof(char));
 	assert(!strcmp(str1, str2));
 	printf(BOLDGREEN "2. OK\t");
 	ft_bzero(str1, 0 * sizeof(char));
@@ -51,5 +51,11 @@ void	ft_bzero_test(void)
 	ft_bzero(str1, strlen(str1));
 	bzero(str2, strlen(str2));
 	assert(!strcmp(str1, str2));
-	printf(BOLDGREEN "6. OK" RESET "\n");
+	memset(str1, '.', 15 * sizeof(char));
+	memset(str2, '.', 15 * sizeof(char));
+	printf(BOLDGREEN "6. OK\t");
+	ft_bzero(str1, strlen(str1) + 2);
+	bzero(str2, strlen(str2) + 2);
+	assert(!strcmp(str1, str2));
+	printf(BOLDGREEN "7. OK" RESET "\n");
 }

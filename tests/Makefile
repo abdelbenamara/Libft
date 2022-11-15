@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/11/14 00:18:41 by abenamar         ###   ########.fr        #
+#    Updated: 2022/11/15 01:36:44 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRCS += ft_memset_test.c
 SRCS += ft_bzero_test.c 
 SRCS += ft_memcpy_test.c 
 SRCS += ft_memmove_test.c 
+SRCS += ft_strlcpy_test.c 
 SRCS += test.c 
 
 OBJS = ${SRCS:.c=.o}
@@ -43,7 +44,7 @@ RM = rm -f
 	${CC} ${CFLAGS} -c $< -o $@ -I ${INCLUDES}
 
 ${NAME}: ${OBJS}
-	${CC} ${CFLAGS} -o ${NAME} ${OBJS} -I ${INCLUDES} -L${LIBDIR} -l${LIB}
+	${CC} ${CFLAGS} -o ${NAME} ${OBJS} -I ${INCLUDES} -L${LIBDIR} -l${LIB} -lbsd
 
 all: ${NAME}
 

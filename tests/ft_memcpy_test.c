@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:29:09 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/13 23:36:39 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/15 01:30:23 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 
 void	ft_memcpy_test(void)
 {
-	char	str1[14] = "This is a test";
-	char	str2[14] = "This is a test";
+	char	str1[15] = "This is a test";
+	char	str2[15] = "This is a test";
 
 	printf("ft_memcpy\t\t\t");
 	assert(!strcmp(ft_memcpy(str1, "test", 0 * sizeof(char)), memcpy(str2, "test", 0 * sizeof(char))));
@@ -39,5 +39,9 @@ void	ft_memcpy_test(void)
 	assert(!strcmp(ft_memcpy(str1, "**************", strlen(str1)), memcpy(str2, "**************", strlen(str2))));
 	printf(BOLDGREEN "7. OK\t");
 	assert(!strcmp(str1, str2));
-	printf(BOLDGREEN "8. OK" RESET "\n");
+	printf(BOLDGREEN "8. OK\t");
+	assert(!strcmp(ft_memcpy(str1, "**************", strlen(str1) + 2), memcpy(str2, "**************", strlen(str2) + 2)));
+	printf(BOLDGREEN "9. OK\t");
+	assert(!strcmp(str1, str2));
+	printf(BOLDGREEN "10. OK" RESET "\n");
 }
