@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 03:33:21 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/15 01:27:05 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/16 23:34:00 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ void	ft_bzero_test(void)
 	ft_bzero(str1 + 7, 3 * sizeof(char));
 	bzero(str2 + 7, 3 * sizeof(char));
 	assert(!strcmp(str1, str2));
-	memset(str1 + 7, '.', 3 * sizeof(char));
-	memset(str2 + 7, '.', 3 * sizeof(char));
+	memset(str1 + 7, 'a', 3 * sizeof(char));
+	memset(str2 + 7, 'a', 3 * sizeof(char));
 	printf(BOLDGREEN "5. OK\t");
 	ft_bzero(str1, strlen(str1));
 	bzero(str2, strlen(str2));
 	assert(!strcmp(str1, str2));
-	memset(str1, '.', 15 * sizeof(char));
-	memset(str2, '.', 15 * sizeof(char));
+	memset(str1, 'a', 14 * sizeof(char));
+	memset(str2, 'a', 14 * sizeof(char));
 	printf(BOLDGREEN "6. OK\t");
 	ft_bzero(str1, strlen(str1) + 2);
 	bzero(str2, strlen(str2) + 2);

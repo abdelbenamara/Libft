@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 00:15:44 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/15 01:29:29 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/16 21:28:19 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ void	ft_memmove_test(void)
 	printf(BOLDGREEN "5. OK\t");
 	assert(!strcmp(str1, str2));
 	printf(BOLDGREEN "6. OK\t");
-	assert(!strcmp(ft_memmove(str1, "**************", strlen(str1)), memmove(str2, "**************", strlen(str2))));
+	assert(!strcmp(ft_memmove(str1, "This is a test", strlen(str1)), memmove(str2, "This is a test", strlen(str2))));
 	printf(BOLDGREEN "7. OK\t");
 	assert(!strcmp(str1, str2));
 	printf(BOLDGREEN "8. OK\t");
-	assert(!strcmp(ft_memmove(str1, "**************", strlen(str1) + 2), memmove(str2, "**************", strlen(str2) + 2)));
+	assert(!strcmp(ft_memmove(str1, "This is a test", strlen(str1) + 2), memmove(str2, "This is a test", strlen(str2) + 2)));
 	printf(BOLDGREEN "9. OK\t");
 	assert(!strcmp(str1, str2));
 	printf(BOLDGREEN "10. OK\t");

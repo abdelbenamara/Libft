@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/11/15 01:36:44 by abenamar         ###   ########.fr        #
+#    Updated: 2022/11/16 22:19:51 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,10 +41,10 @@ CFLAGS += -Werror
 RM = rm -f
 
 %.o : %.c
-	${CC} ${CFLAGS} -c $< -o $@ -I ${INCLUDES}
+	${CC} ${CFLAGS} -g3 -c $< -o $@ -I ${INCLUDES}
 
 ${NAME}: ${OBJS}
-	${CC} ${CFLAGS} -o ${NAME} ${OBJS} -I ${INCLUDES} -L${LIBDIR} -l${LIB} -lbsd
+	${CC} ${CFLAGS} -g3 -o ${NAME} ${OBJS} -I ${INCLUDES} -L${LIBDIR} -l${LIB} -lbsd
 
 all: ${NAME}
 
