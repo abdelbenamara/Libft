@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:22:31 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/14 00:46:36 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/16 21:09:17 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	void	*p;
+	uint8_t			*d;
+	const uint8_t	*s;
 
-	p = dest;
+	d = dest;
+	s = src;
 	if (dest != NULL && src != NULL)
-		while (n-- > 0)
-			*(uint8_t *)dest++ = *(uint8_t *)src++;
-	return (p);
+		while (n--)
+			*d++ = *s++;
+	return (dest);
 }
