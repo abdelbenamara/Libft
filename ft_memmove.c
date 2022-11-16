@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 00:06:11 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/14 00:15:08 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/16 23:51:01 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,15 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	return (ft_memcpy(dest, src, n));
+	uint8_t			*d;
+	const uint8_t	*s;
+
+	d = dest;
+	s = src;
+	if (d < s)
+		ft_memcpy(dest, src, n);
+	else
+		while (n--)
+			d[n] = s[n];
+	return (dest);
 }
