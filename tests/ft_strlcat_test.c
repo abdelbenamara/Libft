@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 00:26:00 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/17 11:41:00 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/17 17:53:07 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,19 @@ void	ft_strlcat_test(void)
 	str1[14] = '\0';
 	str2[14] = '\0';
 	printf(BOLDGREEN "8. OK\t");
-	assert(ft_strlcat(str1, "This is a test", strlen(str1) * 2 + 3) == strlcat(str2, "This is a test", strlen(str2) * 2 + 3));
+	assert(ft_strlcat(str1, "This is another test", 29 * sizeof(char)) == strlcat(str2, "This is another test", 29 * sizeof(char)));
 	printf(BOLDGREEN "9. OK\t");
 	assert(!strcmp(str1, str2));
 	str1[14] = '\0';
 	str2[14] = '\0';
 	printf(BOLDGREEN "10. OK\t");
-	assert(ft_strlcat(str1 + 7, "This is a test", 22 * sizeof(char)) == strlcat(str2 + 7, "This is a test", 22 * sizeof(char)));
+	assert(ft_strlcat(str1 + 7, str1, 22 * sizeof(char)) == strlcat(str2 + 7, str2, 22 * sizeof(char)));
 	printf(BOLDGREEN "11. OK\t");
 	assert(!strcmp(str1, str2));
 	str1[14] = '\0';
 	str2[14] = '\0';
 	printf(BOLDGREEN "12. OK\t");
-	assert(ft_strlcat(str1, "This is another test", 30 * sizeof(char)) == strlcat(str2, "This is another test", 30 * sizeof(char)));
+	assert(ft_strlcat(str1, str1 + 7, 29 * sizeof(char)) == strlcat(str2, str2 + 7, 29 * sizeof(char)));
 	printf(BOLDGREEN "13. OK\t");
 	assert(!strcmp(str1, str2));
 	printf(BOLDGREEN "14. OK" RESET "\n");

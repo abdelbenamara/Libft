@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/11/17 09:27:18 by abenamar         ###   ########.fr        #
+#    Updated: 2022/11/17 17:22:08 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ ${NAME}: libft ${OBJS}
 	${CC} ${CFLAGS} -g3 -o ${NAME} ${OBJS} -I ${INCLUDES} -L${LIBDIR} -l${LIB} -lbsd
 
 libft:
-	cd ${CURDIR}/.. && ${MAKE} re
+	cd ${CURDIR}/.. && ${MAKE}
 
 all: ${NAME}
 

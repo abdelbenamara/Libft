@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 01:01:23 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/16 21:15:40 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:55:17 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_strlcpy_test(void)
 	printf(BOLDGREEN "7. OK\t");
 	assert(!strcmp(str1, str2));
 	printf(BOLDGREEN "8. OK\t");
-	assert(ft_strlcpy(str1, "This is a test", strlen(str1) + 2) == strlcpy(str2, "This is a test", strlen(str2) + 2));
+	assert(ft_strlcpy(str1, "This is a test", 18 * sizeof(char)) == strlcpy(str2, "This is a test", 18 * sizeof(char)));
 	printf(BOLDGREEN "9. OK\t");
 	assert(!strcmp(str1, str2));
 	printf(BOLDGREEN "10. OK\t");
