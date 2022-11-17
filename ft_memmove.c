@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 00:06:11 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/16 23:51:01 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/17 18:24:54 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	uint8_t			*d;
 	const uint8_t	*s;
 
+	if (!dest || !src || !n)
+		return (dest);
 	d = dest;
 	s = src;
 	if (d < s)
