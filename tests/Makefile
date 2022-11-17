@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/11/16 22:19:51 by abenamar         ###   ########.fr        #
+#    Updated: 2022/11/17 09:27:18 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRCS += ft_bzero_test.c
 SRCS += ft_memcpy_test.c 
 SRCS += ft_memmove_test.c 
 SRCS += ft_strlcpy_test.c 
+SRCS += ft_strlcat_test.c 
 SRCS += test.c 
 
 OBJS = ${SRCS:.c=.o}
@@ -43,8 +44,11 @@ RM = rm -f
 %.o : %.c
 	${CC} ${CFLAGS} -g3 -c $< -o $@ -I ${INCLUDES}
 
-${NAME}: ${OBJS}
+${NAME}: libft ${OBJS}
 	${CC} ${CFLAGS} -g3 -o ${NAME} ${OBJS} -I ${INCLUDES} -L${LIBDIR} -l${LIB} -lbsd
+
+libft:
+	cd ${CURDIR}/.. && ${MAKE} re
 
 all: ${NAME}
 
