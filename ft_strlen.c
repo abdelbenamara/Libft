@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 00:42:07 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/17 02:33:16 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/17 18:26:22 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
+	if (!s)
+		return (0);
 	len = 0;
-	if (s)
-		while (*s++)
-			len++;
+	while (*s++)
+		len++;
 	return (len);
 }
