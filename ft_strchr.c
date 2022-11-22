@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 21:55:39 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/18 23:02:17 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/22 21:20:46 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,23 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char		*r;
+	char			*r;
 	unsigned char	b;
 
+	r = NULL;
 	if (!s)
-		return (NULL);
-	r = (char *) s;
-	b = c;
-	while (*r)
-		if (*r == b)
-			return (r);
-		else
-			++r;
-	if (*r == b)
 		return (r);
-	return (NULL);
+	b = c;
+	while (*s)
+	{
+		if (*s == b)
+		{
+			r = (char *) s;
+			break ;
+		}
+		++s;
+	}
+	if (*s == b)
+		r = (char *) s;
+	return (r);
 }
