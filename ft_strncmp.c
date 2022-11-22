@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 21:36:07 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/22 21:58:15 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/22 22:35:37 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		++s1;
 		++s2;
 	}
-	return (*s1 - *s2);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
