@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/22 21:24:33 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/11/22 22:05:58 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	ft_toupper_test(void);
 void	ft_tolower_test(void);
 void	ft_strchr_test(void);
 void	ft_strrchr_test(void);
+void	ft_strncmp_test(void);
 
 int	main(void)
 {
@@ -54,5 +55,6 @@ int	main(void)
 	ft_tolower_test();
 	ft_strchr_test();
 	ft_strrchr_test();
+	ft_strncmp_test();
 	return (0);
 }
