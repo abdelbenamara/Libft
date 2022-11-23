@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/11/23 00:22:22 by abenamar         ###   ########.fr        #
+#    Updated: 2022/11/23 22:21:49 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRCS += ft_strchr_test.c
 SRCS += ft_strrchr_test.c 
 SRCS += ft_strncmp_test.c 
 SRCS += ft_memchr_test.c 
+SRCS += ft_memcmp_test.c
 SRCS += test.c 
 
 OBJS = ${SRCS:.c=.o}
