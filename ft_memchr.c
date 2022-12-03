@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 00:06:43 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/23 00:29:30 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/03 00:09:16 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	uint8_t	*r;
-	uint8_t	b;
+	const uint8_t	b = c;
+	uint8_t			*r;
 
 	if (!s || !n)
 		return (NULL);
 	r = (uint8_t *) s;
-	b = c;
 	while (--n && *r)
 	{
 		if (*r == b)
