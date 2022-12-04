@@ -6,16 +6,11 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 12:15:48 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/04 14:52:08 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft_test.h"
-
-#define RESET   	"\033[0m"
-#define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
-#define BOLDMAGENTA "\033[1m\033[35m"      /* Bold Magenta */
 
 int	main(void)
 {
@@ -45,7 +40,8 @@ int	main(void)
 	ft_atoi_test();
 	ft_calloc_test();
 	ft_strdup_test();
-
+	printf("\n");
 	ft_substr_test();
+	ft_strjoin_test();
 	return (0);
 }

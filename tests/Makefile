@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/04 12:40:14 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/04 14:41:19 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRCS += ft_calloc_test.c
 SRCS += ft_strdup_test.c
 
 SRCS += ft_substr_test.c
+SRCS += ft_strjoin_test.c
 
 SRCS += test.c 
 

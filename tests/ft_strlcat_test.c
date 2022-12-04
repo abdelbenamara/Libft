@@ -6,17 +6,11 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 00:26:00 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/17 17:53:07 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/04 14:28:45 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <assert.h>
-#include <stdio.h>
-#include <bsd/string.h>
-#include "libft.h"
-
-#define RESET   	"\033[0m"
-#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
+#include "libft_test.h"
 
 void	ft_strlcat_test(void)
 {

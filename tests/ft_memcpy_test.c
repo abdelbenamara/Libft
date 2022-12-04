@@ -6,17 +6,11 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:29:09 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/16 21:14:03 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/04 14:27:21 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <assert.h>
-#include <stdio.h>
-#include <string.h>
-#include "libft.h"
-
-#define RESET   	"\033[0m"
-#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
+#include "libft_test.h"
 
 void	ft_memcpy_test(void)
 {

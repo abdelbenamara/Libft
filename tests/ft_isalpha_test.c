@@ -6,17 +6,11 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/12 02:14:42 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/04 14:24:47 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <assert.h>
-#include <ctype.h>
-#include <stdio.h>
-#include "libft.h"
-
-#define RESET   	"\033[0m"
-#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
+#include "libft_test.h"
 
 void	ft_isalpha_test(void)
 {
