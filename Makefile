@@ -6,13 +6,13 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/04 10:45:59 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/04 12:37:38 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-INCLUDES = ${CURDIR}
+INCLUDES = -I ${CURDIR}
 
 SRCS += ft_isalpha.c 
 SRCS += ft_isdigit.c 
@@ -38,6 +38,8 @@ SRCS += ft_atoi.c
 SRCS += ft_calloc.c
 SRCS += ft_strdup.c
 
+SRCS += ft_substr.c
+
 OBJS = ${SRCS:.c=.o}
 
 CC = gcc
@@ -53,7 +55,7 @@ AROPTIONS = rcs
 RM = rm -f
 
 %.o : %.c
-	${CC} ${CFLAGS} -c $< -o $@ -I ${INCLUDES}
+	${CC} ${CFLAGS} -c $< -o $@ ${INCLUDES}
 
 ${NAME}: ${OBJS}
 	${AR} ${AROPTIONS} ${NAME} ${OBJS}
