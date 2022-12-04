@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 10:44:54 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 10:58:37 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/04 11:39:30 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s)
 	char			*dup;
 
 	dup = ft_calloc(len + 1, sizeof(char));
+	if (!dup)
+		return (NULL);
 	ft_strlcpy(dup, s, len + 1);
 	return (dup);
 }
