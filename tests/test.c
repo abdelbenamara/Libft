@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/02 23:36:23 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/04 11:22:43 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	ft_memcmp_test(void);
 void	ft_strnstr_test(void);
 void	ft_atoi_test(void);
 void	ft_calloc_test(void);
+void	ft_strdup_test(void);
 
 int	main(void)
 {
@@ -66,5 +67,6 @@ int	main(void)
 	ft_strnstr_test();
 	ft_atoi_test();
 	ft_calloc_test();
+	ft_strdup_test();
 	return (0);
 }

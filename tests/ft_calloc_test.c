@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 23:16:56 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/03 01:25:31 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/04 11:08:30 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,21 +37,21 @@ void	ft_calloc_test(void)
 	free(ptr1);
 	free(ptr2);
 	printf(BOLDGREEN "2. OK\t");
-	ptr1 = ft_calloc(0, 1);
-	ptr2 = calloc(0, 1);
+	ptr1 = ft_calloc(0, 1 * sizeof(size_t));
+	ptr2 = calloc(0, 1 * sizeof(size_t));
 	assert(!memcmp(ptr1, ptr2, 0));
 	free(ptr1);
 	free(ptr2);
 	printf(BOLDGREEN "3. OK\t");
-	ptr1 = ft_calloc(1, 1);
-	ptr2 = calloc(1, 1);
-	assert(!memcmp(ptr1, ptr2, 1));
+	ptr1 = ft_calloc(1, sizeof(size_t));
+	ptr2 = calloc(1, sizeof(size_t));
+	assert(!memcmp(ptr1, ptr2, 1 * sizeof(size_t)));
 	free(ptr1);
 	free(ptr2);
 	printf(BOLDGREEN "4. OK\t");
-	ptr1 = ft_calloc(128, 1);
-	ptr2 = calloc(128, 1);
-	assert(!memcmp(ptr1, ptr2, 128));
+	ptr1 = ft_calloc(4096, sizeof(size_t));
+	ptr2 = calloc(4096, sizeof(size_t));
+	assert(!memcmp(ptr1, ptr2, 4096));
 	free(ptr1);
 	free(ptr2);
 	printf(BOLDGREEN "5. OK" RESET "\n");
