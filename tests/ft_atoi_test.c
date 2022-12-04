@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 00:21:41 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/25 00:44:03 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/04 11:52:28 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 
 void	ft_atoi_test(void)
 {
-
 	printf("ft_atoi \t\t\t");
 	assert(ft_atoi("") == atoi(""));
 	printf(BOLDGREEN "1. OK\t");

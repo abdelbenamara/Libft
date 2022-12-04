@@ -6,16 +6,18 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/04 11:23:21 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/04 12:40:14 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = test.out
 
-INCLUDES = ${CURDIR}/..
+INCLUDES += -I .
+INCLUDES += -I ${CURDIR}/..
 
-LIBDIR = ${CURDIR}/..
-LIB = ft
+LIBDIR = -L${CURDIR}/..
+LIB += -lft
+LIB += -lbsd
 
 SRCS += ft_isalpha_test.c 
 SRCS += ft_isdigit_test.c 
@@ -40,6 +42,9 @@ SRCS += ft_strnstr_test.c
 SRCS += ft_atoi_test.c
 SRCS += ft_calloc_test.c
 SRCS += ft_strdup_test.c
+
+SRCS += ft_substr_test.c
+
 SRCS += test.c 
 
 OBJS = ${SRCS:.c=.o}
@@ -49,14 +54,15 @@ CC = gcc
 CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
+CFLAGS += -g3
 
 RM = rm -f
 
 %.o : %.c
-	${CC} ${CFLAGS} -g3 -c $< -o $@ -I ${INCLUDES}
+	${CC} ${CFLAGS} -c $< -o $@ ${INCLUDES}
 
 ${NAME}: libft ${OBJS}
-	${CC} ${CFLAGS} -g3 -o ${NAME} ${OBJS} -I ${INCLUDES} -L${LIBDIR} -l${LIB} -lbsd
+	${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${INCLUDES} ${LIBDIR} ${LIB}
 
 libft:
 	cd ${CURDIR}/.. && ${MAKE}
