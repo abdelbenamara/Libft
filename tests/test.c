@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:52:08 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/05 15:02:55 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ int	main(void)
 	printf("\n");
 	ft_substr_test();
 	ft_strjoin_test();
+	ft_strtrim_test();
 	return (0);
 }

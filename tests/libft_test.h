@@ -6,12 +6,12 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:14:14 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:41:41 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/05 15:03:10 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIBFT_TEST
-# define FT_LIBFT_TEST
+#ifndef LIBFT_TEST_H
+# define LIBFT_TEST_H
 
 # include <assert.h>
 # include <bsd/string.h>
@@ -52,5 +52,6 @@ void	ft_strdup_test(void);
 
 void	ft_substr_test(void);
 void	ft_strjoin_test(void);
+void	ft_strtrim_test(void);
 
 #endif

@@ -1,52 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr_test.c                                   :+:      :+:    :+:   */
+/*   ft_strtrim_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 11:52:03 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 15:02:49 by abenamar         ###   ########.fr       */
+/*   Created: 2022/12/04 16:16:07 by abenamar          #+#    #+#             */
+/*   Updated: 2022/12/05 15:09:59 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-void	ft_substr_test(void)
+void	ft_strtrim_test(void)
 {
 	char	*str;
 
-	printf("ft_substr \t\t\t");
-	str = ft_substr("", 0, 0);
+	printf("ft_strtrim \t\t\t");
+	str = ft_strtrim("", "");
 	assert(!strcmp(str, ""));
 	free(str);
 	printf(BOLDGREEN "1. OK\t");
-	str = ft_substr("", 1, 2);
-	assert(!strcmp(str, ""));
+	str = ft_strtrim("test", "");
+	assert(!strcmp(str, "test"));
 	free(str);
 	printf(BOLDGREEN "2. OK\t");
-	str = ft_substr("test", 0, 0);
+	str = ft_strtrim("", "test");
 	assert(!strcmp(str, ""));
 	free(str);
 	printf(BOLDGREEN "3. OK\t");
-	str = ft_substr("test", 1, strlen("test"));
-	assert(!strcmp(str, "est"));
+	str = ft_strtrim("test", "abc");
+	assert(!strcmp(str, "test"));
 	free(str);
 	printf(BOLDGREEN "4. OK\t");
-	str = ft_substr("test", 2, 1);
-	assert(!strcmp(str, "s"));
+	str = ft_strtrim(" test", " ");
+	assert(!strcmp(str, "test"));
 	free(str);
 	printf(BOLDGREEN "5. OK\t");
-	str = ft_substr("This is a test", 5, 2);
-	assert(!strcmp(str, "is"));
+	str = ft_strtrim("test ", " ");
+	assert(!strcmp(str, "test"));
 	free(str);
 	printf(BOLDGREEN "6. OK\t");
-	str = ft_substr("This test is a test", 5, 4);
+	str = ft_strtrim(" test ", " ");
 	assert(!strcmp(str, "test"));
 	free(str);
 	printf(BOLDGREEN "7. OK\t");
-	str = ft_substr("This is another test", 0, strlen("This is another test"));
-	assert(!strcmp(str, "This is another test"));
+	str = ft_strtrim("   test   ", " ");
+	assert(!strcmp(str, "test"));
 	free(str);
-	printf(BOLDGREEN "8. OK" RESET "\n");
+	printf(BOLDGREEN "8. OK\t");
+	str = ft_strtrim("abcabcabctestabcabcabc", "abc");
+	assert(!strcmp(str, "test"));
+	free(str);
+	printf(BOLDGREEN "9. OK\t");
+	str = ft_strtrim("   This is a test   ", " ");
+	assert(!strcmp(str, "This is a test"));
+	free(str);
+	printf(BOLDGREEN "10. OK" RESET "\n");
 }
