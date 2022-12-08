@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 21:07:24 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/03 00:10:53 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/08 20:37:22 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const unsigned char	b = c;
-	char				*r;
+	size_t				i;
 
-	r = NULL;
 	if (!s)
-		return (r);
-	while (*s)
+		return (NULL);
+	i = ft_strlen(s);
+	while (i > 0)
 	{
-		if (*s == b)
-			r = (char *) s;
-		++s;
+		if (s[i] == b)
+			break ;
+		--i;
 	}
-	if (*s == b)
-		r = (char *) s;
-	return (r);
+	if (s[i] == b)
+		return ((char *)(s + i));
+	return (NULL);
 }
