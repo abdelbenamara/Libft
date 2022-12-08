@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 01:32:23 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:25:10 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/08 22:33:29 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ void	ft_isascii_test(void)
 	printf(BOLDGREEN "6. OK\t");
 	assert(ft_isascii(128) == 0 && isascii(128) == 0);
 	printf(BOLDGREEN "7. OK\t");
-	assert(ft_isascii(224) == 0 && isascii(224) == 0);
-	printf(BOLDGREEN "8. OK\t");
 	assert(ft_isascii(216) == 0 && isascii(216) == 0);
-	printf(BOLDGREEN "9. OK" RESET "\n");
+	printf(BOLDGREEN "8. OK\t");
+	assert(ft_isascii(224) == 0 && isascii(224) == 0);
+	printf(BOLDGREEN "9. OK\t");
+	assert(ft_isascii(255) == 0 && isascii(255) == 0);
+	printf(BOLDGREEN "10. OK" RESET "\n");
 }
