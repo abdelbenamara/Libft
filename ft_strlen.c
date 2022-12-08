@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 00:42:07 by abenamar          #+#    #+#             */
-/*   Updated: 2022/11/17 18:26:22 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/08 18:29:20 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ size_t	ft_strlen(const char *s)
 		return (0);
 	len = 0;
 	while (*s++)
-		len++;
+		++len;
 	return (len);
 }
