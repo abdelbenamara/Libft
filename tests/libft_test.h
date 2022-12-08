@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:14:14 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/08 21:21:55 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/08 23:36:15 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ void	ft_strjoin_test(void);
 void	ft_strtrim_test(void);
 void	ft_split_test(void);
 void	ft_itoa_test(void);
+void	ft_strmapi_test(void);
 
 #endif
