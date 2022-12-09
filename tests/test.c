@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 03:32:17 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 16:08:29 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	main(void)
 	ft_striteri_test();
 	ft_putchar_fd_test();
 	ft_putstr_fd_test();
+	ft_putendl_fd_test();
 	printf("-\t\t  ---\t\t-\n\n" BOLDMAGENTA "Part 2:" RESET "\t\t" BOLDGREEN "SUCCESS" RESET "\n\n");
 	return (0);
 }

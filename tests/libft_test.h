@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:14:14 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 03:33:04 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 16:08:01 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ void	ft_strmapi_test(void);
 void	ft_striteri_test(void);
 void	ft_putchar_fd_test(void);
 void	ft_putstr_fd_test(void);
+void	ft_putendl_fd_test(void);
 
 #endif
