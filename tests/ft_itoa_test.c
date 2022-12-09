@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:05:25 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:36:00 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 19:41:10 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ void	ft_itoa_test(void)
 	assert(strlen(str) == strlen("2147483647"));
 	free(str);
 	printf(BOLDGREEN "12. OK\t");
-	str = ft_itoa(1234567890);
-	assert(!strcmp(str, "1234567890"));
+	str = ft_itoa(1000000000);
+	assert(!strcmp(str, "1000000000"));
 	printf(BOLDGREEN "13. OK\t");
-	assert(strlen(str) == strlen("1234567890"));
+	assert(strlen(str) == strlen("1000000000"));
 	free(str);
 	printf(BOLDGREEN "14. OK" RESET "\n");
 }
