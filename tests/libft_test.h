@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:14:14 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/08 23:57:47 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 02:18:26 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 # include <assert.h>
 # include <bsd/string.h>
 # include <ctype.h>
+# include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <unistd.h>
 # include "libft.h"
 
 # define RESET   	"\033[0m"
@@ -57,5 +59,6 @@ void	ft_split_test(void);
 void	ft_itoa_test(void);
 void	ft_strmapi_test(void);
 void	ft_striteri_test(void);
+void	ft_putchar_fd_test(void);
 
 #endif
