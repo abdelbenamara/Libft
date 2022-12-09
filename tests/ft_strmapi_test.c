@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:26:34 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/08 23:35:36 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:36:16 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_strmapi_test(void)
 {
 	char	*str;
 
-	printf("ft_strmapi \t\t\t");
+	printf("ft_strmapi\t   |\t\t");
 	str = ft_strmapi("", &tolower_or_toupper);
 	assert(!strcmp(str, ""));
 	free(str);

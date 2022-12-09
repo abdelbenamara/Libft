@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 01:42:34 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/08 22:42:24 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:17:19 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_memset_test(void)
 	char	str1[15] = "This is a test";
 	char	str2[15] = "This is a test";
 
-	printf("ft_memset\t\t\t");
+	printf("ft_memset\t   |\t\t");
 	assert(!memcmp(ft_memset(str1 + 2, '.', 0 * sizeof(char)), memset(str2 + 2, '.', 0 * sizeof(char)), 0));
 	printf(BOLDGREEN "1. OK\t");
 	assert(!memcmp(str1, str2, 0));

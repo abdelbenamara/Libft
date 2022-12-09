@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 21:02:50 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:31:21 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:20:59 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_toupper_test(void)
 {
-	printf("ft_toupper\t\t\t");
+	printf("ft_toupper\t   |\t\t");
 	assert(ft_toupper('A') == toupper('A'));
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_toupper('Z') == toupper('Z'));

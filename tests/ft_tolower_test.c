@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 21:48:06 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:30:58 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:20:44 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_tolower_test(void)
 {
-	printf("ft_tolower\t\t\t");
+	printf("ft_tolower\t   |\t\t");
 	assert(ft_tolower('A') == tolower('A'));
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_tolower('Z') == tolower('Z'));

@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 15:14:49 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/05 19:24:51 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:35:42 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_split_test(void)
 {
 	char	**strs;
 
-	printf("ft_split \t\t\t");
+	printf("ft_split\t   |\t\t");
 	strs = ft_split("", ' ');
 	assert(strs[0] == NULL);
 	free(strs[0]);

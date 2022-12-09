@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:29:09 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:27:21 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:16:14 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_memcpy_test(void)
 	char	str1[15] = "This is a test";
 	char	str2[15] = "This is a test";
 
-	printf("ft_memcpy\t\t\t");
+	printf("ft_memcpy\t   |\t\t");
 	assert(!strcmp(ft_memcpy(str1, "test", 0 * sizeof(char)), memcpy(str2, "test", 0 * sizeof(char))));
 	printf(BOLDGREEN "1. OK\t");
 	assert(!strcmp(str1, str2));

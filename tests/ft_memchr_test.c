@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 00:21:13 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:26:11 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:15:58 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_memchr_test(void)
 {
 	char	str[15] = "This is a test";
 
-	printf("ft_memchr\t\t\t");
+	printf("ft_memchr\t   |\t\t");
 	assert(ft_memchr(str, ' ', 0 * sizeof(uint8_t)) == memchr(str, ' ', 0 * sizeof(uint8_t)));
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_memchr(str, ' ', strlen(str)) == memchr(str, ' ', strlen(str)));

@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 22:37:58 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:28:06 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:31:21 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_strchr_test(void)
 {
 	char	str[15] = "This is a test";
 
-	printf("ft_strchr\t\t\t");
+	printf("ft_strchr\t   |\t\t");
 	assert(ft_strchr(str, ' ') == strchr(str, ' '));
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_strchr(str, '\0') == strchr(str, '\0'));

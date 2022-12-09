@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 16:16:07 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/05 15:09:59 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:35:23 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_strtrim_test(void)
 {
 	char	*str;
 
-	printf("ft_strtrim \t\t\t");
+	printf("ft_strtrim\t   |\t\t");
 	str = ft_strtrim("", "");
 	assert(!strcmp(str, ""));
 	free(str);

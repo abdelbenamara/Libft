@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:17:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/08 22:25:12 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:17:38 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_memcmp_test(void)
 {
 	char	str[29] = "This is a test";
 
-	printf("ft_memcmp\t\t\t");
+	printf("ft_memcmp\t   |\t\t");
 	assert(ft_memcmp(str, "test", 0 * sizeof(char)) == memcmp(str, "test", 0 * sizeof(char)));
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_memcmp(str, "test", 5 * sizeof(char)) < 0 && memcmp(str, "test", 5 * sizeof(char)) < 0);

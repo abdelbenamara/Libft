@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 22:42:41 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:29:50 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 00:32:19 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_strnstr_test(void)
 {
 	char	str[15] = "This is a test";
 
-	printf("ft_strnstr\t\t\t");
+	printf("ft_strnstr\t   |\t\t");
 	assert(ft_strnstr(str, "test", 0 * sizeof(char)) == strnstr(str, "test", 0 * sizeof(char)));
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_strnstr(str, "test", 2 * sizeof(char)) == strnstr(str, "test", 2 * sizeof(char)));
