@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 11:09:08 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:41:55 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:23:18 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_strdup_test(void)
 	char	*str1;
 	char	*str2;
 
-	printf("ft_strdup\t   |\t\t");
+	printf("ft_strdup\t");
 	str1 = ft_strdup("");
 	str2 = strdup("");
 	assert(!strcmp(str1, str2));

@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 16:19:28 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/10 01:03:49 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	main(void)
 {
-	printf("\nProject:\t" BOLDMAGENTA " Libft" RESET "\n\n");
-	printf(BOLDCYAN "Method" RESET "\t\t\t\t" BOLDCYAN "Tests" RESET "\n");
-	printf("-\t\t  ---\t\t-\n");
+	printf("\nProject: " BOLDMAGENTA "Libft" RESET "\n\n");
+	printf("\nPart 1: " BOLDMAGENTA "Libc functions" RESET "\n\n");
+	printf(BOLDCYAN "Function" RESET "\t" BOLDCYAN "Tests" RESET "\n\n");
 	ft_isalpha_test();
 	ft_isdigit_test();
 	ft_isalnum_test();
@@ -40,9 +40,9 @@ int	main(void)
 	ft_atoi_test();
 	ft_calloc_test();
 	ft_strdup_test();
-	printf("-\t\t  ---\t\t-\n\n" BOLDMAGENTA "Part 1:" RESET "\t\t" BOLDGREEN "SUCCESS" RESET "\n\n");
-	printf(BOLDCYAN "Method" RESET "\t\t\t\t" BOLDCYAN "Tests" RESET "\n");
-	printf("-\t\t  ---\t\t-\n");
+	printf("\n");
+	printf("\nPart 2: " BOLDMAGENTA "Additionnal functions" RESET "\n\n");
+	printf(BOLDCYAN "Function" RESET "\t" BOLDCYAN "Tests" RESET "\n\n");
 	ft_substr_test();
 	ft_strjoin_test();
 	ft_strtrim_test();
@@ -54,6 +54,6 @@ int	main(void)
 	ft_putstr_fd_test();
 	ft_putendl_fd_test();
 	ft_putnbr_fd_test();
-	printf("-\t\t  ---\t\t-\n\n" BOLDMAGENTA "Part 2:" RESET "\t\t" BOLDGREEN "SUCCESS" RESET "\n\n");
+	printf("\n");
 	return (0);
 }

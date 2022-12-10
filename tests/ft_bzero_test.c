@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 03:33:21 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:17:04 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:21:48 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_bzero_test(void)
 	char	str1[15] = "This is a test";
 	char	str2[15] = "This is a test";
 
-	printf("ft_bzero\t   |\t\t");
+	printf("ft_bzero\t");
 	ft_bzero(str1 + 15, 0 * sizeof(char));
 	bzero(str2 + 15, 0 * sizeof(char));
 	assert(!strcmp(str1, str2));

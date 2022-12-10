@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 16:17:24 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 19:44:09 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:31:28 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putnbr_fd_test(void)
 
 	if (fd == -1)
 		return ;
-	printf("ft_putnbr_fd\t   |\t\t");
+	printf("ft_putnbr_fd\t");
 	ft_putnbr_fd(0, fd);
 	printf(BOLDGREEN "1. OK\t");
 	ft_putnbr_fd(-0, fd);

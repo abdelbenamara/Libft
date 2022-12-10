@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 23:16:56 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:33:04 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:22:05 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_calloc_test(void)
 	size_t	*ptr1;
 	size_t	*ptr2;
 
-	printf("ft_calloc\t   |\t\t");
+	printf("ft_calloc\t");
 	ptr1 = ft_calloc(0, 0);
 	ptr2 = calloc(0, 0);
 	assert(!memcmp(ptr1, ptr2, 0));

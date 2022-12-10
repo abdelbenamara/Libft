@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 01:01:00 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:12:03 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:21:16 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_isalnum_test(void)
 {
-	printf("ft_isalnum\t   |\t\t");
+	printf("ft_isalnum\t");
 	assert(ft_isalnum('A') != 0 && isalnum('A') != 0);
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_isalnum('Z') != 0 && isalnum('Z') != 0);

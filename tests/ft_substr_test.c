@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 11:52:03 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:34:43 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:29:33 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_substr_test(void)
 {
 	char	*str;
 
-	printf("ft_substr\t   |\t\t");
+	printf("ft_substr\t");
 	str = ft_substr("", 0, 0);
 	assert(!strcmp(str, ""));
 	free(str);

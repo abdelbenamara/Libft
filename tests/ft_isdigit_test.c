@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:12:52 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:11:21 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:21:04 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_isdigit_test(void)
 {
-	printf("ft_isdigit\t   |\t\t");
+	printf("ft_isdigit\t");
 	assert(ft_isdigit('0') != 0 && isdigit('0') != 0);
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_isdigit('9') != 0 && isdigit('9') != 0);

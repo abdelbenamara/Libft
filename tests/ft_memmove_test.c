@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 00:15:44 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:16:27 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:24:49 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_memmove_test(void)
 	char	str1[15] = "This is a test";
 	char	str2[15] = "This is a test";
 
-	printf("ft_memmove\t   |\t\t");
+	printf("ft_memmove\t");
 	assert(!strcmp(ft_memmove(str1, "test", 0 * sizeof(char)), memmove(str2, "test", 0 * sizeof(char))));
 	printf(BOLDGREEN "1. OK\t");
 	assert(!strcmp(str1, str2));

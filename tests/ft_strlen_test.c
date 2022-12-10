@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 01:04:24 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:15:41 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:24:09 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_strlen_test(void)
 {
-	printf("ft_strlen\t   |\t\t");
+	printf("ft_strlen\t");
 	assert(ft_strlen("") == strlen(""));
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_strlen("\0") == strlen("\0"));

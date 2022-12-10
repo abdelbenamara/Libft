@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 00:26:00 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:20:22 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:24:33 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_strlcat_test(void)
 	char	str1[29] = "This is a test";
 	char	str2[29] = "This is a test";
 
-	printf("ft_strlcat\t   |\t\t");
+	printf("ft_strlcat\t");
 	assert(ft_strlcat(str1, "test", 0 * sizeof(char)) == strlcat(str2, "test", 0 * sizeof(char)));
 	printf(BOLDGREEN "1. OK\t");
 	assert(!strcmp(str1, str2));

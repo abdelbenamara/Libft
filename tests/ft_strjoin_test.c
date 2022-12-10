@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:57:33 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:35:05 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:29:40 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_strjoin_test(void)
 {
 	char	*str;
 
-	printf("ft_strjoin\t   |\t\t");
+	printf("ft_strjoin\t");
 	str = ft_strjoin("", "");
 	assert(!strcmp(str, ""));
 	free(str);

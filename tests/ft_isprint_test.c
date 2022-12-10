@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 02:00:36 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:12:36 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:21:32 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_isprint_test(void)
 {
-	printf("ft_isprint\t   |\t\t");
+	printf("ft_isprint\t");
 	assert(ft_isprint(' ') != 0 && isprint(' ') != 0);
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_isprint('~') != 0 && isprint('~') != 0);

@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:52:23 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:36:35 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:30:27 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_striteri_test(void)
 {
 	char	*str;
 
-	printf("ft_striteri\t   |\t\t");
+	printf("ft_striteri\t");
 	str = strdup("");
 	ft_striteri(str, &tolower_or_toupper);
 	assert(!strcmp(str, ""));

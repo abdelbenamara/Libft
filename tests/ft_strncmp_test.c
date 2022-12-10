@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 21:44:02 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 00:31:01 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:27:29 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_strncmp_test(void)
 {
 	char	str[29] = "This is a test";
 
-	printf("ft_strncmp\t   |\t\t");
+	printf("ft_strncmp\t");
 	assert(ft_strncmp(str, "test", 0 * sizeof(char)) == strncmp(str, "test", 0 * sizeof(char)));
 	printf(BOLDGREEN "1. OK\t");
 	assert(ft_strncmp(str, "test", 5 * sizeof(char)) < 0 && strncmp(str, "test", 5 * sizeof(char)) < 0);

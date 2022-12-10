@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:05:25 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 19:41:10 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/09 20:30:08 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_itoa_test(void)
 {
 	char	*str;
 
-	printf("ft_itoa\t\t   |\t\t");
+	printf("ft_itoa\t\t");
 	str = ft_itoa(0);
 	assert(!strcmp(str, "0"));
 	printf(BOLDGREEN "1. OK\t");
