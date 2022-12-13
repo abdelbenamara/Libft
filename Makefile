@@ -6,15 +6,15 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/09 16:13:53 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/13 01:48:06 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME := libft.a
 
-INCLUDES = -I ${CURDIR}
+INCLUDES := -I ${CURDIR}
 
-SRCS += ft_isalpha.c 
+SRCS := ft_isalpha.c 
 SRCS += ft_isdigit.c 
 SRCS += ft_isalnum.c 
 SRCS += ft_isascii.c 
@@ -50,25 +50,31 @@ SRCS += ft_putstr_fd.c
 SRCS += ft_putendl_fd.c
 SRCS += ft_putnbr_fd.c
 
-OBJS = ${SRCS:.c=.o}
+ifneq (, $(findstring bonus, ${MAKECMDGOALS}))
+SRCS += ft_lstnew_bonus.c
+endif
 
-CC = gcc
+OBJS := ${SRCS:.c=.o}
 
-CFLAGS += -Wall
+CC := gcc
+
+CFLAGS := -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
 
-AR = ar
+AR := ar
 
-AROPTIONS = rcs
+AROPTIONS := rcs
 
-RM = rm -f
+RM := rm -f
 
-%.o : %.c
+%.o: %.c
 	${CC} ${CFLAGS} -c $< -o $@ ${INCLUDES}
 
 ${NAME}: ${OBJS}
 	${AR} ${AROPTIONS} ${NAME} ${OBJS}
+
+bonus: ${NAME}
 
 all: ${NAME}
 
@@ -80,4 +86,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: re fclean clean all
+.PHONY: re fclean clean all bonus
