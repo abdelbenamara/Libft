@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:14:14 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 16:18:42 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/13 01:23:46 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,7 @@ void	ft_putchar_fd_test(void);
 void	ft_putstr_fd_test(void);
 void	ft_putendl_fd_test(void);
 void	ft_putnbr_fd_test(void);
+
+void	ft_lstnew_test(void);
 
 #endif

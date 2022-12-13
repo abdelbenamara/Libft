@@ -6,20 +6,21 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/09 16:19:12 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/13 01:48:22 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = test.out
+NAME := test.out
 
-INCLUDES += -I .
+INCLUDES := -I ${CURDIR}
 INCLUDES += -I ${CURDIR}/..
 
-LIBDIR = -L${CURDIR}/..
-LIB += -lft
-LIB += -lbsd
+LDFLAGS := -L${CURDIR}/..
 
-SRCS += ft_isalpha_test.c 
+LDLIBS := -lft
+LDLIBS += -lbsd
+
+SRCS := ft_isalpha_test.c 
 SRCS += ft_isdigit_test.c 
 SRCS += ft_isalnum_test.c 
 SRCS += ft_isascii_test.c 
@@ -57,25 +58,33 @@ SRCS += ft_putnbr_fd_test.c
 
 SRCS += test.c 
 
-OBJS = ${SRCS:.c=.o}
+CC := gcc
 
-CC = gcc
-
-CFLAGS += -Wall
+CFLAGS := -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
 CFLAGS += -g3
 
-RM = rm -f
+ifneq (, $(findstring bonus, ${MAKECMDGOALS}))
+SRCS += ft_lstnew_bonus_test.c
 
-%.o : %.c
+CFLAGS += -DBONUS
+endif
+
+RM := rm -f
+
+OBJS := ${SRCS:.c=.o}
+
+%.o: %.c
 	${CC} ${CFLAGS} -c $< -o $@ ${INCLUDES}
 
 ${NAME}: libft ${OBJS}
-	${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${INCLUDES} ${LIBDIR} ${LIB}
+	${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${INCLUDES} ${LDFLAGS} ${LDLIBS}
+
+bonus: ${NAME}
 
 libft:
-	cd ${CURDIR}/.. && ${MAKE}
+	cd ${CURDIR}/.. && ${MAKE} ${MAKECMDGOALS}
 
 all: ${NAME}
 
@@ -87,4 +96,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: re fclean clean all libft
+.PHONY: re fclean clean all libft bonus
