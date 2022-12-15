@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 00:51:53 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/13 01:33:16 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/14 23:58:46 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	ft_lstnew_test(void)
 	t_list	*tmp;
 
 	printf("ft_lstnew\t");
-	item = ft_lstnew("");
-	assert(!strcmp(item->content, ""));
+	item = ft_lstnew(NULL);
+	assert(item->content == NULL);
 	assert(item->next == NULL);
 	free(item);
 	printf(BOLDGREEN "1. OK\t");
-	item = ft_lstnew("hello");
-	assert(!strcmp(item->content, "hello"));
+	item = ft_lstnew("");
+	assert(!strcmp(item->content, ""));
 	assert(item->next == NULL);
 	free(item);
 	printf(BOLDGREEN "2. OK\t");

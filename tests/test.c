@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/13 01:34:46 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/15 00:17:37 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int	main(void)
 	printf("\nPart 3: " BOLDMAGENTA "Bonus" RESET "\n\n");
 	printf(BOLDCYAN "Function" RESET "\t" BOLDCYAN "Tests" RESET "\n\n");
 	ft_lstnew_test();
+	ft_lstadd_front_test();
 	printf("\n");
 #endif
 	return (0);
