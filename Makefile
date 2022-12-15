@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/13 01:48:06 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/14 23:56:39 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS += ft_putnbr_fd.c
 
 ifneq (, $(findstring bonus, ${MAKECMDGOALS}))
 SRCS += ft_lstnew_bonus.c
+SRCS += ft_lstadd_front_bonus.c
 endif
 
 OBJS := ${SRCS:.c=.o}
