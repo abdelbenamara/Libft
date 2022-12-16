@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/15 00:17:52 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/16 03:07:53 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ CFLAGS += -g3
 ifneq (, $(findstring bonus, ${MAKECMDGOALS}))
 SRCS += ft_lstnew_bonus_test.c
 SRCS += ft_lstadd_front_bonus_test.c
+SRCS += ft_lstsize_bonus_test.c
 
 CFLAGS += -DBONUS
 endif
