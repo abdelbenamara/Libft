@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/19 20:01:35 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/19 21:14:56 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int	main(void)
 	ft_lstsize_test();
 	ft_lstlast_test();
 	ft_lstadd_back_test();
+	ft_lstdelone_test();
 	printf("\n");
 #endif
 	return (0);
