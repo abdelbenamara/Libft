@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 19:51:09 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/19 20:18:52 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/19 20:45:51 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-	item = *lst;
-	while (item->next)
-		item = item->next;
+	item = ft_lstlast(*lst);
 	item->next = new;
 }
