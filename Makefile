@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/19 19:52:03 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/19 20:35:47 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ SRCS += ft_lstadd_front_bonus.c
 SRCS += ft_lstsize_bonus.c
 SRCS += ft_lstlast_bonus.c
 SRCS += ft_lstadd_back_bonus.c
+SRCS += ft_lstdelone_bonus.c
 endif
 
 OBJS := ${SRCS:.c=.o}
