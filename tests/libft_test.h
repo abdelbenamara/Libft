@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:14:14 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/19 19:48:34 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/19 20:02:10 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ void	ft_lstnew_test(void);
 void	ft_lstadd_front_test(void);
 void	ft_lstsize_test(void);
 void	ft_lstlast_test(void);
+void	ft_lstadd_back_test(void);
 
 #endif
