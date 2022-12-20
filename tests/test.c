@@ -6,7 +6,7 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/20 07:50:02 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/20 09:24:25 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(void)
 {
 	printf("\nProject: " BOLDMAGENTA "Libft" RESET "\n\n");
-	printf("\nPart 1: " BOLDMAGENTA "Libc functions" RESET "\n\n");
+	printf("-\nPart 1: " BOLDMAGENTA "Libc functions" RESET "\n\n");
 	printf(BOLDCYAN "Function" RESET "\t" BOLDCYAN "Tests" RESET "\n\n");
 	ft_isalpha_test();
 	ft_isdigit_test();
@@ -41,7 +41,7 @@ int	main(void)
 	ft_calloc_test();
 	ft_strdup_test();
 	printf("\n");
-	printf("\nPart 2: " BOLDMAGENTA "Additionnal functions" RESET "\n\n");
+	printf("-\nPart 2: " BOLDMAGENTA "Additionnal functions" RESET "\n\n");
 	printf(BOLDCYAN "Function" RESET "\t" BOLDCYAN "Tests" RESET "\n\n");
 	ft_substr_test();
 	ft_strjoin_test();
@@ -56,7 +56,7 @@ int	main(void)
 	ft_putnbr_fd_test();
 	printf("\n");
 #ifdef BONUS
-	printf("\nPart 3: " BOLDMAGENTA "Bonus" RESET "\n\n");
+	printf("-\nPart 3: " BOLDMAGENTA "Bonus" RESET "\n\n");
 	printf(BOLDCYAN "Function" RESET "\t" BOLDCYAN "Tests" RESET "\n\n");
 	ft_lstnew_test();
 	ft_lstadd_front_test();

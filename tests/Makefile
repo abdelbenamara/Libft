@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/20 09:11:09 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/20 09:22:23 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,17 +56,8 @@ SRCS += ft_putstr_fd_test.c
 SRCS += ft_putendl_fd_test.c
 SRCS += ft_putnbr_fd_test.c
 
-SRCS += test.c 
-
-CC := gcc
-
-CFLAGS := -Wall
-CFLAGS += -Wextra
-CFLAGS += -Werror
-CFLAGS += -g3
-
 ifneq (, $(findstring bonus, ${MAKECMDGOALS}))
-BONUS = 1
+BONUS := 1
 endif
 
 ifdef BONUS
@@ -81,6 +72,19 @@ SRCS += ft_lstiter_bonus_test.c
 SRCS += ft_lstmap_bonus_test.c
 endif
 
+SRCS += test.c 
+
+CC := gcc
+
+CFLAGS := -g3
+CFLAGS += -Wall
+CFLAGS += -Wextra
+CFLAGS += -Werror
+
+ifdef BONUS
+CFLAGS += -DBONUS
+endif
+
 RM := rm -f
 
 OBJS := ${SRCS:.c=.o}
@@ -91,13 +95,11 @@ OBJS := ${SRCS:.c=.o}
 ${NAME}: .libft ${OBJS}
 	${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${INCLUDES} ${LDFLAGS} ${LDLIBS}
 
-bonus: .bonus ${NAME}
-
-.bonus:
-	${CC} ${CFLAGS} -DBONUS -c test.c -o test.o ${INCLUDES}
+bonus: ${NAME}
 
 .libft:
 	cd ${CURDIR}/.. && ${MAKE} ${MAKECMDGOALS}
+	${CC} ${CFLAGS} -c test.c -o test.o ${INCLUDES}
 
 all: ${NAME}
 
