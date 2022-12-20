@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/20 07:49:27 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/20 09:11:09 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,10 @@ CFLAGS += -Werror
 CFLAGS += -g3
 
 ifneq (, $(findstring bonus, ${MAKECMDGOALS}))
+BONUS = 1
+endif
+
+ifdef BONUS
 SRCS += ft_lstnew_bonus_test.c
 SRCS += ft_lstadd_front_bonus_test.c
 SRCS += ft_lstsize_bonus_test.c
@@ -75,8 +79,6 @@ SRCS += ft_lstdelone_bonus_test.c
 SRCS += ft_lstclear_bonus_test.c
 SRCS += ft_lstiter_bonus_test.c
 SRCS += ft_lstmap_bonus_test.c
-
-CFLAGS += -DBONUS
 endif
 
 RM := rm -f
@@ -89,7 +91,10 @@ OBJS := ${SRCS:.c=.o}
 ${NAME}: .libft ${OBJS}
 	${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${INCLUDES} ${LDFLAGS} ${LDLIBS}
 
-bonus: ${NAME}
+bonus: .bonus ${NAME}
+
+.bonus:
+	${CC} ${CFLAGS} -DBONUS -c test.c -o test.o ${INCLUDES}
 
 .libft:
 	cd ${CURDIR}/.. && ${MAKE} ${MAKECMDGOALS}
