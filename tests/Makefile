@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/19 22:25:18 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/20 07:22:58 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,6 +73,7 @@ SRCS += ft_lstlast_bonus_test.c
 SRCS += ft_lstadd_back_bonus_test.c
 SRCS += ft_lstdelone_bonus_test.c
 SRCS += ft_lstclear_bonus_test.c
+SRCS += ft_lstiter_bonus_test.c
 
 CFLAGS += -DBONUS
 endif
