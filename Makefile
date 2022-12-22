@@ -6,13 +6,13 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/20 07:28:50 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/22 22:00:12 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := libft.a
 
-INCLUDES := -I ${CURDIR}
+INCLUDES := -I $(CURDIR)
 
 SRCS := ft_isalpha.c 
 SRCS += ft_isdigit.c 
@@ -50,7 +50,7 @@ SRCS += ft_putstr_fd.c
 SRCS += ft_putendl_fd.c
 SRCS += ft_putnbr_fd.c
 
-ifneq (, $(findstring bonus, ${MAKECMDGOALS}))
+ifneq (, $(findstring bonus, $(MAKECMDGOALS)))
 SRCS += ft_lstnew_bonus.c
 SRCS += ft_lstadd_front_bonus.c
 SRCS += ft_lstsize_bonus.c
@@ -62,7 +62,7 @@ SRCS += ft_lstiter_bonus.c
 SRCS += ft_lstmap_bonus.c
 endif
 
-OBJS := ${SRCS:.c=.o}
+OBJS := $(SRCS:.c=.o)
 
 CC := gcc
 
@@ -77,20 +77,20 @@ AROPTIONS := rcs
 RM := rm -f
 
 %.o: %.c
-	${CC} ${CFLAGS} -c $< -o $@ ${INCLUDES}
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
-${NAME}: ${OBJS}
-	${AR} ${AROPTIONS} ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+	$(AR) $(AROPTIONS) $(NAME) $(OBJS)
 
-bonus: ${NAME}
+bonus: $(NAME)
 
-all: ${NAME}
+all: $(NAME)
 
 clean:
-	${RM} ${OBJS}
+	$(RM) $(OBJS)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
 
 re: fclean all
 
