@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 01:20:52 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/02 23:58:32 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 17:38:29 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ void	*ft_memset(void *s, int c, size_t n)
 	const uint8_t	b = c;
 	uint8_t			*r;
 
-	if (!s || !n)
-		return (s);
 	r = s;
-	while (n--)
-		*r++ = b;
+	while (n)
+	{
+		*r = b;
+		++r;
+		--n;
+	}
 	return (s);
 }
