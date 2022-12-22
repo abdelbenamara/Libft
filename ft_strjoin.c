@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:55:42 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/04 14:43:40 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 18:24:00 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	const size_t	len = ft_strlen(s1) + ft_strlen(s2);
-	char			*join;
+	size_t	len;
+	char	*join;
 
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
 	join = ft_calloc(len + 1, sizeof(char));
 	if (!join)
 		return (NULL);
