@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 07:27:37 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/20 07:39:24 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 19:47:39 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f || !del)
 		return (NULL);
-	new = ft_lstnew(f(lst->content));
-	if (!new)
-		return (NULL);
-	item = lst;
-	lst = lst->next;
-	del(item->content);
-	free(item);
+	new = NULL;
 	while (lst)
 	{
 		item = ft_lstnew(f(lst->content));
 		if (!item)
 			return (ft_lstclear(&new, del), NULL);
 		ft_lstadd_back(&new, item);
-		item = lst;
 		lst = lst->next;
-		del(item->content);
-		free(item);
 	}
 	return (new);
 }
