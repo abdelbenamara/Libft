@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:42:54 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/08 22:20:17 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 17:40:42 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static size_t	int_to_strlen(int n)
 	while (i > 0)
 	{
 		++len;
-		i /= 10;
+		i = i / 10;
 	}
 	return (len);
 }
@@ -53,8 +53,9 @@ char	*ft_itoa(int n)
 		a[0] = '-';
 	while (i > 0)
 	{
-		a[--len] = i % 10 + '0';
-		i /= 10;
+		--len;
+		a[len] = i % 10 + '0';
+		i = i / 10;
 	}
 	return (a);
 }
