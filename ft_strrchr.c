@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 21:07:24 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/08 20:37:22 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/21 19:04:51 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	const unsigned char	b = c;
 	size_t				i;
 
-	if (!s)
-		return (NULL);
 	i = ft_strlen(s);
 	while (i > 0)
 	{
