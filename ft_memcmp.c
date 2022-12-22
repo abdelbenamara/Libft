@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:09:46 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/08 20:00:48 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/21 19:04:21 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	const unsigned char	*r1 = (unsigned char *) s1;
 	const unsigned char	*r2 = (unsigned char *) s2;
 
-	if (!s1 && s2)
-		return (0 - *r2);
-	else if (s1 && !s2)
-		return (*r1);
-	else if (!s1 || !s2 || !n)
+	if (!n)
 		return (0);
 	while (--n)
 	{
