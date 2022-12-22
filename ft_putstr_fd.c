@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 03:22:27 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 03:27:09 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 21:21:07 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
-		ft_putchar_fd(*s++, fd);
+	{
+		ft_putchar_fd(*s, fd);
+		++s;
+	}
 }
