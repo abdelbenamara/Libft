@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 22:33:58 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/08 18:16:06 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 21:16:01 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,21 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	const size_t	dst_len = ft_strlen(dst);
 	const char		*s = src;
+	size_t			dst_len;
 
-	if (!dst || !src || size <= dst_len)
+	dst_len = 0;
+	if (dst)
+		dst_len = ft_strlen(dst);
+	if (size <= dst_len)
 		return (size + ft_strlen(src));
 	dst += dst_len;
 	while (--size > dst_len && *s)
-		*dst++ = *s++;
+	{
+		*dst = *s;
+		++dst;
+		++s;
+	}
 	*dst = '\0';
 	return (dst_len + ft_strlen(src));
 }
