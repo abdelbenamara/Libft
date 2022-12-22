@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 21:45:47 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/19 22:21:52 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 21:33:32 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	if (!lst || !del)
 		return ;
 	first = lst;
-	item = *lst;
-	while (item)
+	while (*lst)
 	{
 		item = (*lst)->next;
 		ft_lstdelone(*lst, del);
