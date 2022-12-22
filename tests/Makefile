@@ -6,16 +6,19 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/20 09:22:23 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/22 22:26:27 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := test.out
 
-INCLUDES := -I ${CURDIR}
-INCLUDES += -I ${CURDIR}/..
+LIBFT := libft.a
+LIBFTSO := libft.so
 
-LDFLAGS := -L${CURDIR}/..
+INCLUDES := -I $(CURDIR)
+INCLUDES += -I $(CURDIR)/..
+
+LDFLAGS := -L$(CURDIR)/..
 
 LDLIBS := -lft
 LDLIBS += -lbsd
@@ -56,7 +59,7 @@ SRCS += ft_putstr_fd_test.c
 SRCS += ft_putendl_fd_test.c
 SRCS += ft_putnbr_fd_test.c
 
-ifneq (, $(findstring bonus, ${MAKECMDGOALS}))
+ifneq (, $(findstring bonus, $(MAKECMDGOALS)))
 BONUS := 1
 endif
 
@@ -71,6 +74,8 @@ SRCS += ft_lstclear_bonus_test.c
 SRCS += ft_lstiter_bonus_test.c
 SRCS += ft_lstmap_bonus_test.c
 endif
+
+LIBFTSRCS := $(patsubst %,$(CURDIR)/../%,$(SRCS:_test.c=.c))
 
 SRCS += test.c 
 
@@ -87,28 +92,43 @@ endif
 
 RM := rm -f
 
-OBJS := ${SRCS:.c=.o}
+OBJS := $(SRCS:.c=.o)
+
+LIBFTOBJS := $(LIBFTSRCS:.c=.o)
 
 %.o: %.c
-	${CC} ${CFLAGS} -c $< -o $@ ${INCLUDES}
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
-${NAME}: .libft ${OBJS}
-	${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${INCLUDES} ${LDFLAGS} ${LDLIBS}
+$(NAME): .libft $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(INCLUDES) $(LDFLAGS) $(LDLIBS)
 
-bonus: ${NAME}
+bonus: $(NAME)
 
 .libft:
-	cd ${CURDIR}/.. && ${MAKE} ${MAKECMDGOALS}
-	${CC} ${CFLAGS} -c test.c -o test.o ${INCLUDES}
+	$(MAKE) -C $(CURDIR)/.. $(findstring bonus, $(MAKECMDGOALS))
+	ln -fs $(CURDIR)/../$(LIBFT) $(LIBFT)
+	$(CC) $(CFLAGS) -c test.c -o test.o $(INCLUDES)
 
-all: ${NAME}
+all: $(NAME)
 
 clean:
-	${RM} ${OBJS}
+	$(RM) $(OBJS)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
+	$(RM) $(LIBFT)
+	$(RM) $(LIBFTSO)
 
 re: fclean all
 
-.PHONY: re fclean clean all bonus
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(LIBFTSRCS)
+	gcc -nostartfiles -shared -o $(LIBFTSO) $(LIBFTOBJS)
+
+norm:
+	@cd $(CURDIR)/.. && norminette $$(ls | grep "\.c\|\.h")
+
+vtest: $(NAME)
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(NAME)
+
+.PHONY: re fclean clean all bonus so norm vtest

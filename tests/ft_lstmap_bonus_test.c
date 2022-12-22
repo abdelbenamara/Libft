@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 07:39:49 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/20 08:22:05 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 19:51:45 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,24 +56,26 @@ void	ft_lstmap_test(void)
 	assert(new == NULL);
 	printf(BOLDGREEN "4. OK\t");
 	new = ft_lstmap(lst, &tolower_or_toupper, &free);
+	assert(!strcmp(lst->content, "A"));
 	assert(!strcmp(new->content, "a"));
 	ft_lstclear(&new, &free);
 	printf(BOLDGREEN "5. OK\t");
-	lst = ft_lstnew(strdup("A"));
 	ft_lstadd_back(&lst, ft_lstnew(strdup("ABC")));
 	new = ft_lstmap(lst->next, &tolower_or_toupper, &free);
 	assert(!strcmp(lst->content, "A"));
+	assert(!strcmp(lst->next->content, "ABC"));
 	assert(!strcmp(new->content, "aBc"));
-	ft_lstdelone(lst, &free);
 	ft_lstclear(&new, &free);
 	printf(BOLDGREEN "6. OK\t");
-	lst = ft_lstnew(strdup("A"));
-	ft_lstadd_back(&lst, ft_lstnew(strdup("ABC")));
 	ft_lstadd_back(&lst, ft_lstnew(strdup("test")));
 	new = ft_lstmap(lst, &tolower_or_toupper, &free);
+	assert(!strcmp(lst->content, "A"));
+	assert(!strcmp(lst->next->content, "ABC"));
+	assert(!strcmp(lst->next->next->content, "test"));
 	assert(!strcmp(new->content, "a"));
 	assert(!strcmp(new->next->content, "aBc"));
 	assert(!strcmp(new->next->next->content, "tEsT"));
+	ft_lstclear(&lst, &free);
 	ft_lstclear(&new, &free);
 	printf(BOLDGREEN "7. OK" RESET "\n");
 }

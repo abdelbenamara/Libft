@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 11:52:03 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:29:33 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 19:00:24 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ void	ft_substr_test(void)
 	assert(!strcmp(str, "s"));
 	free(str);
 	printf(BOLDGREEN "5. OK\t");
-	str = ft_substr("This is a test", 5, 2);
-	assert(!strcmp(str, "is"));
+	str = ft_substr("This is a test", 20, 2);
+	assert(!strcmp(str, ""));
 	free(str);
 	printf(BOLDGREEN "6. OK\t");
 	str = ft_substr("This test is a test", 5, 4);

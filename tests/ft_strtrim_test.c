@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 16:16:07 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:29:50 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/22 19:17:49 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,16 +45,16 @@ void	ft_strtrim_test(void)
 	assert(!strcmp(str, "test"));
 	free(str);
 	printf(BOLDGREEN "7. OK\t");
-	str = ft_strtrim("   test   ", " ");
+	str = ft_strtrim("     test           ", "   ");
 	assert(!strcmp(str, "test"));
 	free(str);
 	printf(BOLDGREEN "8. OK\t");
-	str = ft_strtrim("abcabcabctestabcabcabc", "abc");
+	str = ft_strtrim(" abc a b c a b c test abc abc a b c ", "abc ");
 	assert(!strcmp(str, "test"));
 	free(str);
 	printf(BOLDGREEN "9. OK\t");
-	str = ft_strtrim("   This is a test   ", " ");
-	assert(!strcmp(str, "This is a test"));
+	str = ft_strtrim("   This is a test with 'abc ' in it   ", "abc ");
+	assert(!strcmp(str, "This is a test with 'abc ' in it"));
 	free(str);
 	printf(BOLDGREEN "10. OK" RESET "\n");
 }
