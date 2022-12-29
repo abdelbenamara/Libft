@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/22 22:00:12 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/28 17:53:02 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,15 +51,15 @@ SRCS += ft_putendl_fd.c
 SRCS += ft_putnbr_fd.c
 
 ifneq (, $(findstring bonus, $(MAKECMDGOALS)))
-SRCS += ft_lstnew_bonus.c
-SRCS += ft_lstadd_front_bonus.c
-SRCS += ft_lstsize_bonus.c
-SRCS += ft_lstlast_bonus.c
-SRCS += ft_lstadd_back_bonus.c
-SRCS += ft_lstdelone_bonus.c
-SRCS += ft_lstclear_bonus.c
-SRCS += ft_lstiter_bonus.c
-SRCS += ft_lstmap_bonus.c
+SRCS += ft_lstnew.c
+SRCS += ft_lstadd_front.c
+SRCS += ft_lstsize.c
+SRCS += ft_lstlast.c
+SRCS += ft_lstadd_back.c
+SRCS += ft_lstdelone.c
+SRCS += ft_lstclear.c
+SRCS += ft_lstiter.c
+SRCS += ft_lstmap.c
 endif
 
 OBJS := $(SRCS:.c=.o)
