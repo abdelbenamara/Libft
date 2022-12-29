@@ -5,93 +5,151 @@
 #                                                     +:+ +:+         +:+      #
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/28 17:53:02 by abenamar         ###   ########.fr        #
+#    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
+#    Updated: 2022/12/29 10:50:48 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := libft.a
+NAME := test.out
+
+LIBFT := libft.a
+LIBFTSO := libft.so
 
 INCLUDES := -I $(CURDIR)
+INCLUDES += -I $(CURDIR)/..
 
-SRCS := ft_isalpha.c 
-SRCS += ft_isdigit.c 
-SRCS += ft_isalnum.c 
-SRCS += ft_isascii.c 
-SRCS += ft_isprint.c 
-SRCS += ft_strlen.c
-SRCS += ft_memset.c
-SRCS += ft_bzero.c
-SRCS += ft_memcpy.c
-SRCS += ft_memmove.c
-SRCS += ft_strlcpy.c
-SRCS += ft_strlcat.c
-SRCS += ft_toupper.c
-SRCS += ft_tolower.c
-SRCS += ft_strchr.c
-SRCS += ft_strrchr.c
-SRCS += ft_strncmp.c
-SRCS += ft_memchr.c
-SRCS += ft_memcmp.c
-SRCS += ft_strnstr.c
-SRCS += ft_atoi.c
-SRCS += ft_calloc.c
-SRCS += ft_strdup.c
+LDFLAGS := -L$(CURDIR)/..
 
-SRCS += ft_substr.c
-SRCS += ft_strjoin.c
-SRCS += ft_strtrim.c
-SRCS += ft_split.c
-SRCS += ft_itoa.c
-SRCS += ft_strmapi.c
-SRCS += ft_striteri.c
-SRCS += ft_putchar_fd.c
-SRCS += ft_putstr_fd.c
-SRCS += ft_putendl_fd.c
-SRCS += ft_putnbr_fd.c
+LDLIBS := -lft
+LDLIBS += -lbsd
 
-ifneq (, $(findstring bonus, $(MAKECMDGOALS)))
-SRCS += ft_lstnew.c
-SRCS += ft_lstadd_front.c
-SRCS += ft_lstsize.c
-SRCS += ft_lstlast.c
-SRCS += ft_lstadd_back.c
-SRCS += ft_lstdelone.c
-SRCS += ft_lstclear.c
-SRCS += ft_lstiter.c
-SRCS += ft_lstmap.c
-endif
+SRCS := ft_isalpha_test.c 
+SRCS += ft_isdigit_test.c 
+SRCS += ft_isalnum_test.c 
+SRCS += ft_isascii_test.c 
+SRCS += ft_isprint_test.c 
+SRCS += ft_strlen_test.c 
+SRCS += ft_memset_test.c 
+SRCS += ft_bzero_test.c 
+SRCS += ft_memcpy_test.c 
+SRCS += ft_memmove_test.c 
+SRCS += ft_strlcpy_test.c 
+SRCS += ft_strlcat_test.c 
+SRCS += ft_toupper_test.c 
+SRCS += ft_tolower_test.c 
+SRCS += ft_strchr_test.c 
+SRCS += ft_strrchr_test.c 
+SRCS += ft_strncmp_test.c 
+SRCS += ft_memchr_test.c 
+SRCS += ft_memcmp_test.c
+SRCS += ft_strnstr_test.c
+SRCS += ft_atoi_test.c
+SRCS += ft_calloc_test.c
+SRCS += ft_strdup_test.c
 
-OBJS := $(SRCS:.c=.o)
+SRCS += ft_substr_test.c
+SRCS += ft_strjoin_test.c
+SRCS += ft_strtrim_test.c
+SRCS += ft_split_test.c
+SRCS += ft_itoa_test.c
+SRCS += ft_strmapi_test.c
+SRCS += ft_striteri_test.c
+SRCS += ft_putchar_fd_test.c
+SRCS += ft_putstr_fd_test.c
+SRCS += ft_putendl_fd_test.c
+SRCS += ft_putnbr_fd_test.c
 
 CC := gcc
 
-CFLAGS := -Wall
+CFLAGS := -g3
+CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
 
-AR := ar
+ifneq (, $(findstring bonus, $(MAKECMDGOALS)))
+SRCS += ft_lstnew_test.c
+SRCS += ft_lstadd_front_test.c
+SRCS += ft_lstsize_test.c
+SRCS += ft_lstlast_test.c
+SRCS += ft_lstadd_back_test.c
+SRCS += ft_lstdelone_test.c
+SRCS += ft_lstclear_test.c
+SRCS += ft_lstiter_test.c
+SRCS += ft_lstmap_test.c
 
-AROPTIONS := rcs
+CFLAGS += -DBONUS
+endif
+
+LIBFTSRCS := $(patsubst %,$(CURDIR)/../%,$(SRCS:_test.c=.c))
+
+SRCS += test.c 
 
 RM := rm -f
+
+OBJS := $(SRCS:.c=.o)
+
+LIBFTOBJS := $(LIBFTSRCS:.c=.o)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
-$(NAME): $(OBJS)
-	$(AR) $(AROPTIONS) $(NAME) $(OBJS)
+$(NAME): .libft $(OBJS)
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(INCLUDES) $(LDFLAGS) $(LDLIBS)
+
+.libft:
+	@echo "\033[0;36m######################################## make libft ########################################\033[0m"
+	@$(MAKE) -C $(CURDIR)/.. $(findstring bonus, $(MAKECMDGOALS))
+	@ln -fs $(CURDIR)/../$(LIBFT) $(LIBFT)
+	@$(CC) $(CFLAGS) -c test.c -o test.o $(INCLUDES)
+
+test: $(NAME)
+	@echo "\033[0;36m########################################### test ###########################################\033[0m"
+	@./$(NAME)
+
+valgrind-test: $(NAME)
+	@echo "\033[0;36m#################################### test with valgrind ####################################\033[0m"
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(NAME)
+
+norm:
+	@echo "\033[0;36m######################################## norminette ########################################\033[0m"
+	@cd $(CURDIR)/.. && norminette $$(ls | grep "\.c\|\.h")
+
+so:
+	@$(CC) -nostartfiles -fPIC $(CFLAGS) $(LIBFTSRCS)
+	@gcc -nostartfiles -shared -o $(LIBFTSO) $(LIBFTOBJS)
+
+community-tests:
+	@if [ ! -d "Libftest" ]; then \
+		git submodule update Libftest; \
+		bash Libftest/grademe.sh; \
+		sed -i 's/^PATH_LIBFT=.\+$$/PATH_LIBFT=$$(dirname "$$(realpath $$0)")\/..\/../' Libftest/my_config.sh; \
+		sed -i "s/^\(\t'ft_memccpy'\t\\\\\)$$/#\1/" Libftest/srcs/variables/functions/part_1.sh; \
+		sed -i 's/^\(\tmake --no-print-directory -C $${PATH_LIBFT} clean > \/dev\/null\)$$/#\1/' Libftest/srcs/print.sh; \
+		sed -i 's/^\(clear\)$$/#\1/' Libftest/grademe.sh; \
+	fi
+	@if [ ! -d "libft-unit-test" ]; then \
+		git submodule update libft-unit-test; \
+		sed -i 's/^LIBFTDIR\t=\t.\+$$/LIBFTDIR\t=\t$$(CURDIR)\/../' libft-unit-test/Makefile; \
+		sed -i 's/^\(\t@make -C \$$(LIBFTDIR) \)\(so\)$$/\1bonus \2/' libft-unit-test/Makefile; \
+	fi
+	@echo "\033[0;36m##################################### jtoty : Libftest #####################################\033[0m"
+	@echo "n" | bash Libftest/grademe.sh
+	@echo "\033[0;36m################################ alelievr : libft-unit-test ################################\033[0m"
+	@$(MAKE) -C libft-unit-test/ f
 
 bonus: $(NAME)
 
-all: $(NAME)
+all: norm valgrind-test community-tests
 
 clean:
 	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) $(LIBFT)
+	$(RM) $(LIBFTSO)
+	$(RM) *.out
 
 re: fclean all
 
-.PHONY: re fclean clean all bonus
+.PHONY: re fclean clean all bonus community-tests so norm valgrind-test test
