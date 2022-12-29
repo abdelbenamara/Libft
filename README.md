@@ -1,45 +1,40 @@
-# Libft
+# Libft tester
 
-## Compile
+## Installation
 
+- In your Libft project folder :
 ```
-make
-```
-
-```
-make bonus
+git clone https://github.com/abdelbenamara/Libft.git tests/
 ```
 
-## Tests
-
-### Prerequisites
-
-- For custom tests
-
-  - Install [valgrind](https://en.wikipedia.org/wiki/Valgrind)
-  
-- For community tests
-
-  - See [libft-unit-test](https://github.com/alelievr/libft-unit-test/tree/bcd405878374332c860d27208d9fc7dc7490fa07#linux)
-  
-  - See [Libftest](https://github.com/jtoty/Libftest/tree/d6cdc5255fc1aacaa19dca07d8adab0ca65e9bdb#installation)
-
-## Custom tests
-
+## Usage
 ```
-make -C tests/ norm vtest
+make all
+```
+```
+make bonus all
 ```
 
+## Options
+
+- Vanilla :
 ```
-make -C tests/ bonus norm vtest
+make norm test
+```
+```
+make norm bonus test
 ```
 
-## Community tests
-
+- Valgrind :
 ```
-make -C tests/libft-unit-test/ f
+make norm valgrind-test
 ```
 
 ```
-bash tests/Libftest/grademe.sh
+make norm bonus valgrind-test
+```
+
+- Community :
+```
+make community-tests
 ```
