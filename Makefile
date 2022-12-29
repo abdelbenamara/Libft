@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/29 10:50:48 by abenamar         ###   ########.fr        #
+#    Updated: 2022/12/29 12:09:03 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,16 +119,16 @@ so:
 	@gcc -nostartfiles -shared -o $(LIBFTSO) $(LIBFTOBJS)
 
 community-tests:
-	@if [ ! -d "Libftest" ]; then \
-		git submodule update Libftest; \
+	@if [ ! -d "Libftest" ] || [ -z "$$(ls -A Libftest)" ]; then \
+		git submodule update --init Libftest; \
 		bash Libftest/grademe.sh; \
 		sed -i 's/^PATH_LIBFT=.\+$$/PATH_LIBFT=$$(dirname "$$(realpath $$0)")\/..\/../' Libftest/my_config.sh; \
 		sed -i "s/^\(\t'ft_memccpy'\t\\\\\)$$/#\1/" Libftest/srcs/variables/functions/part_1.sh; \
 		sed -i 's/^\(\tmake --no-print-directory -C $${PATH_LIBFT} clean > \/dev\/null\)$$/#\1/' Libftest/srcs/print.sh; \
 		sed -i 's/^\(clear\)$$/#\1/' Libftest/grademe.sh; \
 	fi
-	@if [ ! -d "libft-unit-test" ]; then \
-		git submodule update libft-unit-test; \
+	@if [ ! -d "libft-unit-test" ] || [ -z "$$(ls -A libft-unit-test)" ]; then \
+		git submodule update --init libft-unit-test; \
 		sed -i 's/^LIBFTDIR\t=\t.\+$$/LIBFTDIR\t=\t$$(CURDIR)\/../' libft-unit-test/Makefile; \
 		sed -i 's/^\(\t@make -C \$$(LIBFTDIR) \)\(so\)$$/\1bonus \2/' libft-unit-test/Makefile; \
 	fi
