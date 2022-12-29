@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 02:00:36 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:21:32 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 21:01:45 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,15 @@
 
 void	ft_isprint_test(void)
 {
-	printf("ft_isprint\t");
-	assert(ft_isprint(' ') != 0 && isprint(' ') != 0);
-	printf(BOLDGREEN "1. OK\t");
-	assert(ft_isprint('~') != 0 && isprint('~') != 0);
-	printf(BOLDGREEN "2. OK\t");
-	assert(ft_isprint('M') != 0 && isprint('M') != 0);
-	printf(BOLDGREEN "3. OK\t");
-	assert(ft_isprint('5') != 0 && isprint('5') != 0);
-	printf(BOLDGREEN "4. OK\t");
-	assert(ft_isprint(' ') != 0 && isprint(' ') != 0);
-	printf(BOLDGREEN "5. OK\t");
-	assert(ft_isprint(-1) == 0 && isprint(-1) == 0);
-	printf(BOLDGREEN "6. OK\t");
-	assert(ft_isprint(31) == 0 && isprint(31) == 0);
-	printf(BOLDGREEN "7. OK\t");
-	assert(ft_isprint(127) == 0 && isprint(127) == 0);
-	printf(BOLDGREEN "8. OK\t");
-	assert(ft_isprint(224) == 0 && isprint(224) == 0);
-	printf(BOLDGREEN "9. OK\t");
-	assert(ft_isprint(216) == 0 && isprint(216) == 0);
-	printf(BOLDGREEN "10. OK" RESET "\n");
+	printf(RESET "\nft_isprint\t");
+	ft_assert(1, ft_isprint(' ') != 0 && isprint(' ') != 0);
+	ft_assert(2, ft_isprint('~') != 0 && isprint('~') != 0);
+	ft_assert(3, ft_isprint('M') != 0 && isprint('M') != 0);
+	ft_assert(4, ft_isprint('5') != 0 && isprint('5') != 0);
+	ft_assert(5, ft_isprint(' ') != 0 && isprint(' ') != 0);
+	ft_assert(6, ft_isprint(-1) == 0 && isprint(-1) == 0);
+	ft_assert(7, ft_isprint(31) == 0 && isprint(31) == 0);
+	ft_assert(8, ft_isprint(127) == 0 && isprint(127) == 0);
+	ft_assert(9, ft_isprint(224) == 0 && isprint(224) == 0);
+	ft_assert(10, ft_isprint(216) == 0 && isprint(216) == 0);
 }

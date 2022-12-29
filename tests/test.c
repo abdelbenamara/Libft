@@ -6,17 +6,25 @@
 /*   By: abenamar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:13:18 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/20 09:24:25 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 21:45:13 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
+void	ft_assert(int index, int assertion)
+{
+	if (assertion)
+		printf(BOLDGREEN "%d. OK\t", index);
+	else
+		printf(BOLDRED "%d. KO\t", index);
+}
+
 int	main(void)
 {
-	printf("\nProject: " BOLDMAGENTA "Libft" RESET "\n\n");
-	printf("-\nPart 1: " BOLDMAGENTA "Libc functions" RESET "\n\n");
-	printf(BOLDCYAN "Function" RESET "\t" BOLDCYAN "Tests" RESET "\n\n");
+	printf("\nProject: " BOLDMAGENTA "Libft\n");
+	printf(RESET "\n-\nPart 1: " BOLDMAGENTA "Libc functions\n");
+	printf(BOLDCYAN "\nFunction" RESET "\t" BOLDCYAN "Tests\n");
 	ft_isalpha_test();
 	ft_isdigit_test();
 	ft_isalnum_test();
@@ -40,9 +48,8 @@ int	main(void)
 	ft_atoi_test();
 	ft_calloc_test();
 	ft_strdup_test();
-	printf("\n");
-	printf("-\nPart 2: " BOLDMAGENTA "Additionnal functions" RESET "\n\n");
-	printf(BOLDCYAN "Function" RESET "\t" BOLDCYAN "Tests" RESET "\n\n");
+	printf("\n" RESET "\n-\nPart 2: " BOLDMAGENTA "Additionnal functions\n");
+	printf(BOLDCYAN "\nFunction" RESET "\t" BOLDCYAN "Tests" RESET "\n");
 	ft_substr_test();
 	ft_strjoin_test();
 	ft_strtrim_test();
@@ -54,10 +61,9 @@ int	main(void)
 	ft_putstr_fd_test();
 	ft_putendl_fd_test();
 	ft_putnbr_fd_test();
-	printf("\n");
 #ifdef BONUS
-	printf("-\nPart 3: " BOLDMAGENTA "Bonus" RESET "\n\n");
-	printf(BOLDCYAN "Function" RESET "\t" BOLDCYAN "Tests" RESET "\n\n");
+	printf("\n" RESET "\n-\nPart 3: " BOLDMAGENTA "Bonus" RESET "\n");
+	printf(BOLDCYAN "\nFunction" RESET "\t" BOLDCYAN "Tests" RESET "\n");
 	ft_lstnew_test();
 	ft_lstadd_front_test();
 	ft_lstsize_test();
@@ -67,7 +73,7 @@ int	main(void)
 	ft_lstclear_test();
 	ft_lstiter_test();
 	ft_lstmap_test();
-	printf("\n");
 #endif
+	printf("\n" RESET "\n");
 	return (0);
 }

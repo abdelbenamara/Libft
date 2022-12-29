@@ -6,83 +6,58 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 15:14:49 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:29:58 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 22:00:07 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
+static void	free_split(char **split)
+{
+	size_t	i;
+
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		++i;
+	}
+	free(split);
+}
+
 void	ft_split_test(void)
 {
 	char	**strs;
 
-	printf("ft_split\t");
+	printf(RESET "\nft_split\t");
 	strs = ft_split("", ' ');
-	assert(strs[0] == NULL);
-	free(strs[0]);
-	free(strs);
-	printf(BOLDGREEN "1. OK\t");
+	ft_assert(1, strs[0] == NULL);
+	free_split(strs);
 	strs = ft_split("test", ' ');
-	assert(!strcmp(strs[0], "test"));
-	free(strs[0]);
-	free(strs);
-	printf(BOLDGREEN "2. OK\t");
+	ft_assert(2, !strcmp(strs[0], "test"));
+	free_split(strs);
 	strs = ft_split("te st", ' ');
-	assert(!strcmp(strs[0], "te"));
-	free(strs[0]);
-	assert(!strcmp(strs[1], "st"));
-	free(strs[1]);
-	free(strs);
-	printf(BOLDGREEN "3. OK\t");
+	ft_assert(3, (!strcmp(strs[0], "te") && !strcmp(strs[1], "st")));
+	free_split(strs);
 	strs = ft_split("t e s t", ' ');
-	assert(!strcmp(strs[0], "t"));
-	free(strs[0]);
-	assert(!strcmp(strs[1], "e"));
-	free(strs[1]);
-	assert(!strcmp(strs[2], "s"));
-	free(strs[2]);
-	assert(!strcmp(strs[3], "t"));
-	free(strs[3]);
-	free(strs);
-	printf(BOLDGREEN "4. OK\t");
+	ft_assert(4, (!strcmp(strs[0], "t") && !strcmp(strs[1], "e") && !strcmp(strs[2], "s") && !strcmp(strs[3], "t")));
+	free_split(strs);
 	strs = ft_split(" test", ' ');
-	assert(!strcmp(strs[0], "test"));
-	free(strs[0]);
-	free(strs);
-	printf(BOLDGREEN "5. OK\t");
+	ft_assert(5, !strcmp(strs[0], "test"));
+	free_split(strs);
 	strs = ft_split("test ", ' ');
-	assert(!strcmp(strs[0], "test"));
-	free(strs[0]);
-	free(strs);
-	printf(BOLDGREEN "6. OK\t");
+	ft_assert(6, !strcmp(strs[0], "test"));
+	free_split(strs);
 	strs = ft_split(" test ", ' ');
-	assert(!strcmp(strs[0], "test"));
-	free(strs[0]);
-	free(strs);
-	printf(BOLDGREEN "7. OK\t");
+	ft_assert(7, !strcmp(strs[0], "test"));
+	free_split(strs);
 	strs = ft_split("   test   ", ' ');
-	assert(!strcmp(strs[0], "test"));
-	free(strs[0]);
-	free(strs);
-	printf(BOLDGREEN "8. OK\t");
+	ft_assert(8, !strcmp(strs[0], "test"));
+	free_split(strs);
 	strs = ft_split("te   st", ' ');
-	assert(!strcmp(strs[0], "te"));
-	free(strs[0]);
-	assert(!strcmp(strs[1], "st"));
-	free(strs[1]);
-	free(strs);
-	printf(BOLDGREEN "9. OK\t");
+	ft_assert(9, (!strcmp(strs[0], "te") && !strcmp(strs[1], "st")));
+	free_split(strs);
 	strs = ft_split("   This is   ...   a test   ", ' ');
-	assert(!strcmp(strs[0], "This"));
-	free(strs[0]);
-	assert(!strcmp(strs[1], "is"));
-	free(strs[1]);
-	assert(!strcmp(strs[2], "..."));
-	free(strs[2]);
-	assert(!strcmp(strs[3], "a"));
-	free(strs[3]);
-	assert(!strcmp(strs[4], "test"));
-	free(strs[4]);
-	free(strs);
-	printf(BOLDGREEN "10. OK" RESET "\n");
+	ft_assert(10, (!strcmp(strs[0], "This") && !strcmp(strs[1], "is") && !strcmp(strs[2], "...") && !strcmp(strs[3], "a") && !strcmp(strs[4], "test")));
+	free_split(strs);
 }

@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:52:23 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:30:27 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 22:02:53 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,30 +24,25 @@ void	ft_striteri_test(void)
 {
 	char	*str;
 
-	printf("ft_striteri\t");
+	printf(RESET "\nft_striteri\t");
 	str = strdup("");
 	ft_striteri(str, &tolower_or_toupper);
-	assert(!strcmp(str, ""));
+	ft_assert(1, !strcmp(str, ""));
 	free(str);
-	printf(BOLDGREEN "1. OK\t");
 	str = strdup("a");
 	ft_striteri(str, &tolower_or_toupper);
-	assert(!strcmp(str, "a"));
+	ft_assert(2, !strcmp(str, "a"));
 	free(str);
-	printf(BOLDGREEN "2. OK\t");
 	str = strdup("A");
 	ft_striteri(str, &tolower_or_toupper);
-	assert(!strcmp(str, "a"));
+	ft_assert(3, !strcmp(str, "a"));
 	free(str);
-	printf(BOLDGREEN "3. OK\t");
 	str = strdup("test");
 	ft_striteri(str, &tolower_or_toupper);
-	assert(!strcmp(str, "tEsT"));
+	ft_assert(4, !strcmp(str, "tEsT"));
 	free(str);
-	printf(BOLDGREEN "4. OK\t");
 	str = strdup("This is a test");
 	ft_striteri(str, &tolower_or_toupper);
-	assert(!strcmp(str, "tHiS Is a tEsT"));
+	ft_assert(5, !strcmp(str, "tHiS Is a tEsT"));
 	free(str);
-	printf(BOLDGREEN "5. OK" RESET "\n");
 }

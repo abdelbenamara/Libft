@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 21:48:06 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:25:53 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 21:35:57 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,15 @@
 
 void	ft_tolower_test(void)
 {
-	printf("ft_tolower\t");
-	assert(ft_tolower('A') == tolower('A'));
-	printf(BOLDGREEN "1. OK\t");
-	assert(ft_tolower('Z') == tolower('Z'));
-	printf(BOLDGREEN "2. OK\t");
-	assert(ft_tolower('M') == tolower('M'));
-	printf(BOLDGREEN "3. OK\t");
-	assert(ft_tolower('a') == tolower('a'));
-	printf(BOLDGREEN "4. OK\t");
-	assert(ft_tolower('z') == tolower('z'));
-	printf(BOLDGREEN "5. OK\t");
-	assert(ft_tolower('m') == tolower('m'));
-	printf(BOLDGREEN "6. OK\t");
-	assert(ft_tolower('\0') == tolower('\0'));
-	printf(BOLDGREEN "7. OK\t");
-	assert(ft_tolower('1') == tolower('1'));
-	printf(BOLDGREEN "8. OK\t");
-	assert(ft_tolower(224) == tolower(224));
-	printf(BOLDGREEN "9. OK\t");
-	assert(ft_tolower(' ') == tolower(' '));
-	printf(BOLDGREEN "10. OK" RESET "\n");
+	printf(RESET "\nft_tolower\t");
+	ft_assert(1, ft_tolower('A') == tolower('A'));
+	ft_assert(2, ft_tolower('Z') == tolower('Z'));
+	ft_assert(3, ft_tolower('M') == tolower('M'));
+	ft_assert(4, ft_tolower('a') == tolower('a'));
+	ft_assert(5, ft_tolower('z') == tolower('z'));
+	ft_assert(6, ft_tolower('m') == tolower('m'));
+	ft_assert(7, ft_tolower('\0') == tolower('\0'));
+	ft_assert(8, ft_tolower('1') == tolower('1'));
+	ft_assert(9, ft_tolower(224) == tolower(224));
+	ft_assert(10, ft_tolower(' ') == tolower(' '));
 }

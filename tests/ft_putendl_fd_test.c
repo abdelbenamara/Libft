@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 16:06:40 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:31:19 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 22:04:57 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putendl_fd_test(void)
 
 	if (fd == -1)
 		return ;
-	printf("ft_putendl_fd\t");
+	printf(RESET "\nft_putendl_fd\t");
 	ft_putendl_fd("", fd);
 	printf(BOLDGREEN "1. OK\t");
 	ft_putendl_fd("abcde", fd);
@@ -28,6 +28,6 @@ void	ft_putendl_fd_test(void)
 	ft_putendl_fd("\t \b", fd);
 	printf(BOLDGREEN "4. OK\t");
 	ft_putendl_fd("\0\0\0", fd);
-	printf(BOLDGREEN "5. OK" RESET "\n");
+	printf(BOLDGREEN "5. OK\t");
 	close(fd);
 }

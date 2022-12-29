@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:14:14 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/20 07:49:42 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 20:51:51 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,13 @@
 # include <unistd.h>
 # include "libft.h"
 
-# define RESET   	"\033[0m"
-# define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
-# define BOLDMAGENTA "\033[1m\033[35m"      /* Bold Magenta */
-# define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
+# define RESET			"\033[0m"
+# define BOLDRED		"\033[1m\033[31m"      /* Bold Red */
+# define BOLDGREEN		"\033[1m\033[32m"      /* Bold Green */
+# define BOLDMAGENTA	"\033[1m\033[35m"      /* Bold Magenta */
+# define BOLDCYAN		"\033[1m\033[36m"      /* Bold Cyan */
+
+void	ft_assert(int index, int assertion);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);

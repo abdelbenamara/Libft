@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:57:33 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:29:40 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 21:46:54 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,20 @@ void	ft_strjoin_test(void)
 {
 	char	*str;
 
-	printf("ft_strjoin\t");
+	printf(RESET "\nft_strjoin\t");
 	str = ft_strjoin("", "");
-	assert(!strcmp(str, ""));
+	ft_assert(1, !strcmp(str, ""));
 	free(str);
-	printf(BOLDGREEN "1. OK\t");
 	str = ft_strjoin("test", "");
-	assert(!strcmp(str, "test"));
+	ft_assert(2, !strcmp(str, "test"));
 	free(str);
-	printf(BOLDGREEN "2. OK\t");
 	str = ft_strjoin("", "test");
-	assert(!strcmp(str, "test"));
+	ft_assert(3, !strcmp(str, "test"));
 	free(str);
-	printf(BOLDGREEN "3. OK\t");
 	str = ft_strjoin("test", "test");
-	assert(!strcmp(str, "testtest"));
+	ft_assert(4, !strcmp(str, "testtest"));
 	free(str);
-	printf(BOLDGREEN "4. OK\t");
 	str = ft_strjoin("This is", " a test");
-	assert(!strcmp(str, "This is a test"));
+	ft_assert(5, !strcmp(str, "This is a test"));
 	free(str);
-	printf(BOLDGREEN "5. OK" RESET "\n");
 }

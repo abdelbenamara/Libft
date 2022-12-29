@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 03:27:34 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:31:10 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 22:04:34 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putstr_fd_test(void)
 
 	if (fd == -1)
 		return ;
-	printf("ft_putstr_fd\t");
+	printf(RESET "\nft_putstr_fd\t");
 	ft_putstr_fd("", fd);
 	printf(BOLDGREEN "1. OK\t");
 	ft_putstr_fd("abcde", fd);
@@ -28,6 +28,6 @@ void	ft_putstr_fd_test(void)
 	ft_putstr_fd("\t \b", fd);
 	printf(BOLDGREEN "4. OK\t");
 	ft_putstr_fd("\0\0\0", fd);
-	printf(BOLDGREEN "5. OK" RESET "\n");
+	printf(BOLDGREEN "5. OK\t");
 	close(fd);
 }

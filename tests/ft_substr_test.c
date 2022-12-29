@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 11:52:03 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/22 19:00:24 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 21:46:26 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,37 +16,29 @@ void	ft_substr_test(void)
 {
 	char	*str;
 
-	printf("ft_substr\t");
+	printf(RESET "\nft_substr\t");
 	str = ft_substr("", 0, 0);
-	assert(!strcmp(str, ""));
+	ft_assert(1, !strcmp(str, ""));
 	free(str);
-	printf(BOLDGREEN "1. OK\t");
 	str = ft_substr("", 1, 2);
-	assert(!strcmp(str, ""));
+	ft_assert(2, !strcmp(str, ""));
 	free(str);
-	printf(BOLDGREEN "2. OK\t");
 	str = ft_substr("test", 0, 0);
-	assert(!strcmp(str, ""));
+	ft_assert(3, !strcmp(str, ""));
 	free(str);
-	printf(BOLDGREEN "3. OK\t");
 	str = ft_substr("test", 1, strlen("test"));
-	assert(!strcmp(str, "est"));
+	ft_assert(4, !strcmp(str, "est"));
 	free(str);
-	printf(BOLDGREEN "4. OK\t");
 	str = ft_substr("test", 2, 1);
-	assert(!strcmp(str, "s"));
+	ft_assert(5, !strcmp(str, "s"));
 	free(str);
-	printf(BOLDGREEN "5. OK\t");
 	str = ft_substr("This is a test", 20, 2);
-	assert(!strcmp(str, ""));
+	ft_assert(6, !strcmp(str, ""));
 	free(str);
-	printf(BOLDGREEN "6. OK\t");
 	str = ft_substr("This test is a test", 5, 4);
-	assert(!strcmp(str, "test"));
+	ft_assert(7, !strcmp(str, "test"));
 	free(str);
-	printf(BOLDGREEN "7. OK\t");
 	str = ft_substr("This is another test", 0, strlen("This is another test"));
-	assert(!strcmp(str, "This is another test"));
+	ft_assert(8, !strcmp(str, "This is another test"));
 	free(str);
-	printf(BOLDGREEN "8. OK" RESET "\n");
 }

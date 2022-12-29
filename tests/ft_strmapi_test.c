@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:26:34 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:30:17 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 22:02:14 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,20 @@ void	ft_strmapi_test(void)
 {
 	char	*str;
 
-	printf("ft_strmapi\t");
+	printf(RESET "\nft_strmapi\t");
 	str = ft_strmapi("", &tolower_or_toupper);
-	assert(!strcmp(str, ""));
+	ft_assert(1, !strcmp(str, ""));
 	free(str);
-	printf(BOLDGREEN "1. OK\t");
 	str = ft_strmapi("a", &tolower_or_toupper);
-	assert(!strcmp(str, "a"));
+	ft_assert(2, !strcmp(str, "a"));
 	free(str);
-	printf(BOLDGREEN "2. OK\t");
 	str = ft_strmapi("A", &tolower_or_toupper);
-	assert(!strcmp(str, "a"));
+	ft_assert(3, !strcmp(str, "a"));
 	free(str);
-	printf(BOLDGREEN "3. OK\t");
 	str = ft_strmapi("test", &tolower_or_toupper);
-	assert(!strcmp(str, "tEsT"));
+	ft_assert(4, !strcmp(str, "tEsT"));
 	free(str);
-	printf(BOLDGREEN "4. OK\t");
 	str = ft_strmapi("This is a test", &tolower_or_toupper);
-	assert(!strcmp(str, "tHiS Is a tEsT"));
+	ft_assert(5, !strcmp(str, "tHiS Is a tEsT"));
 	free(str);
-	printf(BOLDGREEN "5. OK" RESET "\n");
 }

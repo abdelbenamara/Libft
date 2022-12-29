@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:05:25 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:30:08 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 22:01:27 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,47 +16,33 @@ void	ft_itoa_test(void)
 {
 	char	*str;
 
-	printf("ft_itoa\t\t");
+	printf(RESET "\nft_itoa\t\t");
 	str = ft_itoa(0);
-	assert(!strcmp(str, "0"));
-	printf(BOLDGREEN "1. OK\t");
-	assert(strlen(str) == strlen("0"));
+	ft_assert(1, !strcmp(str, "0"));
+	ft_assert(2, strlen(str) == strlen("0"));
 	free(str);
-	printf(BOLDGREEN "2. OK\t");
 	str = ft_itoa(-0);
-	assert(!strcmp(str, "0"));
-	printf(BOLDGREEN "3. OK\t");
-	assert(strlen(str) == strlen("0"));
+	ft_assert(3, !strcmp(str, "0"));
+	ft_assert(4, strlen(str) == strlen("0"));
 	free(str);
-	printf(BOLDGREEN "4. OK\t");
 	str = ft_itoa(-123);
-	assert(!strcmp(str, "-123"));
-	printf(BOLDGREEN "5. OK\t");
-	assert(strlen(str) == strlen("-123"));
+	ft_assert(5, !strcmp(str, "-123"));
+	ft_assert(6, strlen(str) == strlen("-123"));
 	free(str);
-	printf(BOLDGREEN "6. OK\t");
 	str = ft_itoa(456);
-	assert(!strcmp(str, "456"));
-	printf(BOLDGREEN "7. OK\t");
-	assert(strlen(str) == strlen("456"));
+	ft_assert(7, !strcmp(str, "456"));
+	ft_assert(8, strlen(str) == strlen("456"));
 	free(str);
-	printf(BOLDGREEN "8. OK\t");
 	str = ft_itoa(-2147483648);
-	assert(!strcmp(str, "-2147483648"));
-	printf(BOLDGREEN "9. OK\t");
-	assert(strlen(str) == strlen("-2147483648"));
+	ft_assert(9, !strcmp(str, "-2147483648"));
+	ft_assert(10, strlen(str) == strlen("-2147483648"));
 	free(str);
-	printf(BOLDGREEN "10. OK\t");
 	str = ft_itoa(2147483647);
-	assert(!strcmp(str, "2147483647"));
-	printf(BOLDGREEN "11. OK\t");
-	assert(strlen(str) == strlen("2147483647"));
+	ft_assert(11, !strcmp(str, "2147483647"));
+	ft_assert(12, strlen(str) == strlen("2147483647"));
 	free(str);
-	printf(BOLDGREEN "12. OK\t");
 	str = ft_itoa(1000000000);
-	assert(!strcmp(str, "1000000000"));
-	printf(BOLDGREEN "13. OK\t");
-	assert(strlen(str) == strlen("1000000000"));
+	ft_assert(13, !strcmp(str, "1000000000"));
+	ft_assert(14, strlen(str) == strlen("1000000000"));
 	free(str);
-	printf(BOLDGREEN "14. OK" RESET "\n");
 }

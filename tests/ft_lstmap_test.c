@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus_test.c                             :+:      :+:    :+:   */
+/*   ft_lstmap_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 07:39:49 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/22 19:51:45 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 22:37:21 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,43 +39,27 @@ void	ft_lstmap_test(void)
 	t_list	*lst;
 	t_list	*new;
 
-	printf("ft_lstmap\t");
+	printf(RESET "\nft_lstmap\t");
 	new = ft_lstmap(NULL, NULL, NULL);
-	assert(new == NULL);
-	printf(BOLDGREEN "1. OK\t");
+	ft_assert(1, new == NULL);
 	new = ft_lstmap(NULL, &tolower_or_toupper, &free);
-	assert(new == NULL);
-	printf(BOLDGREEN "2. OK\t");
+	ft_assert(2, new == NULL);
 	lst = ft_lstnew(strdup("A"));
 	new = ft_lstmap(lst, NULL, &free);
-	assert(!strcmp(lst->content, "A"));
-	assert(new == NULL);
-	printf(BOLDGREEN "3. OK\t");
+	ft_assert(3, (!strcmp(lst->content, "A") && new == NULL));
 	new = ft_lstmap(lst, &tolower_or_toupper, NULL);
-	assert(!strcmp(lst->content, "A"));
-	assert(new == NULL);
-	printf(BOLDGREEN "4. OK\t");
+	ft_assert(4, (!strcmp(lst->content, "A") && new == NULL));
 	new = ft_lstmap(lst, &tolower_or_toupper, &free);
-	assert(!strcmp(lst->content, "A"));
-	assert(!strcmp(new->content, "a"));
+	ft_assert(5, (!strcmp(lst->content, "A") && !strcmp(new->content, "a")));
 	ft_lstclear(&new, &free);
-	printf(BOLDGREEN "5. OK\t");
 	ft_lstadd_back(&lst, ft_lstnew(strdup("ABC")));
 	new = ft_lstmap(lst->next, &tolower_or_toupper, &free);
-	assert(!strcmp(lst->content, "A"));
-	assert(!strcmp(lst->next->content, "ABC"));
-	assert(!strcmp(new->content, "aBc"));
+	ft_assert(6, (!strcmp(lst->content, "A") && !strcmp(lst->next->content, "ABC") && !strcmp(new->content, "aBc")));
 	ft_lstclear(&new, &free);
-	printf(BOLDGREEN "6. OK\t");
 	ft_lstadd_back(&lst, ft_lstnew(strdup("test")));
 	new = ft_lstmap(lst, &tolower_or_toupper, &free);
-	assert(!strcmp(lst->content, "A"));
-	assert(!strcmp(lst->next->content, "ABC"));
-	assert(!strcmp(lst->next->next->content, "test"));
-	assert(!strcmp(new->content, "a"));
-	assert(!strcmp(new->next->content, "aBc"));
-	assert(!strcmp(new->next->next->content, "tEsT"));
+	ft_assert(7, (!strcmp(lst->content, "A") && !strcmp(lst->next->content, "ABC") && !strcmp(lst->next->next->content, "test") 
+				&& !strcmp(new->content, "a") && !strcmp(new->next->content, "aBc") && !strcmp(new->next->next->content, "tEsT")));
 	ft_lstclear(&lst, &free);
 	ft_lstclear(&new, &free);
-	printf(BOLDGREEN "7. OK" RESET "\n");
 }

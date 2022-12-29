@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 01:04:24 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:24:09 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 21:02:36 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 void	ft_strlen_test(void)
 {
-	printf("ft_strlen\t");
-	assert(ft_strlen("") == strlen(""));
-	printf(BOLDGREEN "1. OK\t");
-	assert(ft_strlen("\0") == strlen("\0"));
-	printf(BOLDGREEN "2. OK\t");
-	assert(ft_strlen(" ") == strlen(" "));
-	printf(BOLDGREEN "3. OK\t");
-	assert(ft_strlen(" \0 ") == strlen(" \0 "));
-	printf(BOLDGREEN "4. OK\t");
-	assert(ft_strlen("abcde") == strlen("abcde"));
-	printf(BOLDGREEN "5. OK" RESET "\n");
+	printf(RESET "\nft_strlen\t");
+	ft_assert(1, ft_strlen("") == strlen(""));
+	ft_assert(2, ft_strlen("\0") == strlen("\0"));
+	ft_assert(3, ft_strlen(" ") == strlen(" "));
+	ft_assert(4, ft_strlen(" \0 ") == strlen(" \0 "));
+	ft_assert(5, ft_strlen("abcde") == strlen("abcde"));
 }

@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 21:22:12 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 20:26:10 by abenamar         ###   ########.fr       */
+/*   Updated: 2022/12/28 21:37:42 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,13 @@ void	ft_strrchr_test(void)
 {
 	char	str[15] = "This is a test";
 
-	printf("ft_strrchr\t");
-	assert(ft_strrchr(str, ' ') == strrchr(str, ' '));
-	printf(BOLDGREEN "1. OK\t");
-	assert(ft_strrchr(str, '\0') == strrchr(str, '\0'));
-	printf(BOLDGREEN "2. OK\t");
-	assert(ft_strrchr(str, 'T') == strrchr(str, 'T'));
-	printf(BOLDGREEN "3. OK\t");
-	assert(ft_strrchr(str, 't') == strrchr(str, 't'));
-	printf(BOLDGREEN "4. OK\t");
-	assert(ft_strrchr(str, 'z') == strrchr(str, 'z'));
-	printf(BOLDGREEN "5. OK\t");
+	printf(RESET "\nft_strrchr\t");
+	ft_assert(1, ft_strrchr(str, ' ') == strrchr(str, ' '));
+	ft_assert(2, ft_strrchr(str, '\0') == strrchr(str, '\0'));
+	ft_assert(3, ft_strrchr(str, 'T') == strrchr(str, 'T'));
+	ft_assert(4, ft_strrchr(str, 't') == strrchr(str, 't'));
+	ft_assert(5, ft_strrchr(str, 'z') == strrchr(str, 'z'));
 	str[0] = '\0';
-	assert(ft_strrchr(str, 'a') == strrchr(str, 'a'));
-	printf(BOLDGREEN "6. OK\t");
-	assert(ft_strrchr(str + 7, 'i') == strrchr(str + 7, 'i'));
-	printf(BOLDGREEN "7. OK" RESET "\n");
+	ft_assert(6, ft_strrchr(str, 'a') == strrchr(str, 'a'));
+	ft_assert(7, ft_strrchr(str + 7, 'i') == strrchr(str + 7, 'i'));
 }
