@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/28 17:53:02 by abenamar         ###   ########.fr        #
+#    Updated: 2023/01/08 03:06:20 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ endif
 
 OBJS := $(SRCS:.c=.o)
 
-CC := gcc
+CC := cc
 
 CFLAGS := -Wall
 CFLAGS += -Wextra
