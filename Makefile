@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:24 by abenamar          #+#    #+#              #
-#    Updated: 2022/12/29 12:09:03 by abenamar         ###   ########.fr        #
+#    Updated: 2023/01/08 03:14:31 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,7 @@ SRCS += ft_putstr_fd_test.c
 SRCS += ft_putendl_fd_test.c
 SRCS += ft_putnbr_fd_test.c
 
-CC := gcc
+CC := cc
 
 CFLAGS := -g3
 CFLAGS += -Wall
