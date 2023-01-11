@@ -6,14 +6,13 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:14:14 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/28 20:51:51 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/01/11 00:58:07 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_TEST_H
 # define LIBFT_TEST_H
 
-# include <assert.h>
 # include <bsd/string.h>
 # include <ctype.h>
 # include <fcntl.h>
