@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:14:14 by abenamar          #+#    #+#             */
-/*   Updated: 2023/01/11 00:58:07 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/02/01 21:30:46 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@
 # include <ctype.h>
 # include <fcntl.h>
 # include <stdio.h>
-# include <stdlib.h>
 # include <string.h>
-# include <unistd.h>
 # include "libft.h"
 
 # define RESET			"\033[0m"
