@@ -29,7 +29,6 @@ make norm bonus test
 ```
 make norm valgrind-test
 ```
-
 ```
 make norm bonus valgrind-test
 ```
