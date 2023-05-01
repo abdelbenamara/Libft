@@ -6,16 +6,23 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:27:57 by abenamar          #+#    #+#             */
-/*   Updated: 2023/01/13 03:54:30 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/05/02 00:47:33 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                   libft                                    */
+/*                                                                            */
+/* ************************************************************************** */
 
 typedef struct s_list
 {
@@ -68,5 +75,25 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                               get_next_line                                */
+/*                                                                            */
+/* ************************************************************************** */
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX	FOPEN_MAX
+# endif
+
+# ifndef LINE_SIZE
+#  define LINE_SIZE	4096
+# endif
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE	4096
+# endif
+
+char	*get_next_line(int fd);
 
 #endif
