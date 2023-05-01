@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2023/01/08 03:06:20 by abenamar         ###   ########.fr        #
+#    Updated: 2023/05/02 00:47:45 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,8 @@ SRCS += ft_lstclear.c
 SRCS += ft_lstiter.c
 SRCS += ft_lstmap.c
 endif
+
+SRCS += get_next_line.c
 
 OBJS := $(SRCS:.c=.o)
 
