@@ -6,7 +6,7 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2023/05/02 00:47:45 by abenamar         ###   ########.fr        #
+#    Updated: 2023/05/03 20:52:01 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,6 @@ SRCS += ft_putstr_fd.c
 SRCS += ft_putendl_fd.c
 SRCS += ft_putnbr_fd.c
 
-ifneq (, $(findstring bonus, $(MAKECMDGOALS)))
 SRCS += ft_lstnew.c
 SRCS += ft_lstadd_front.c
 SRCS += ft_lstsize.c
@@ -60,7 +59,6 @@ SRCS += ft_lstdelone.c
 SRCS += ft_lstclear.c
 SRCS += ft_lstiter.c
 SRCS += ft_lstmap.c
-endif
 
 SRCS += get_next_line.c
 
