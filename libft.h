@@ -6,13 +6,14 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:27:57 by abenamar          #+#    #+#             */
-/*   Updated: 2023/05/02 00:47:33 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/05/04 21:08:03 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdarg.h>
 # include <stdio.h>
 # include <stdint.h>
 # include <stdlib.h>
@@ -95,5 +96,20 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 # endif
 
 char	*get_next_line(int fd);
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                 ft_printf                                  */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*ft_uitoa_base(unsigned int n, const char *base);
+char	*ft_uiptrtoa_base(uintptr_t n, const char *base);
+
+int		ft_vdprintf(int fd, const char *format, va_list ap);
+int		ft_vprintf(const char *format, va_list ap);
+
+int		ft_dprintf(int fd, const char *format, ...);
+int		ft_printf(const char *format, ...);
 
 #endif
