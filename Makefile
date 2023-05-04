@@ -6,13 +6,19 @@
 #    By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:54:49 by abenamar          #+#    #+#              #
-#    Updated: 2023/05/03 20:52:01 by abenamar         ###   ########.fr        #
+#    Updated: 2023/05/04 22:08:41 by abenamar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := libft.a
 
 INCLUDES := -I $(CURDIR)
+
+# **************************************************************************** #
+#                                                                              #
+#                                    libft                                     #
+#                                                                              #
+# **************************************************************************** #
 
 SRCS := ft_isalpha.c 
 SRCS += ft_isdigit.c 
@@ -60,7 +66,39 @@ SRCS += ft_lstclear.c
 SRCS += ft_lstiter.c
 SRCS += ft_lstmap.c
 
+# **************************************************************************** #
+#                                                                              #
+#                                get_next_line                                 #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS += get_next_line.c
+
+# **************************************************************************** #
+#                                                                              #
+#                                  ft_printf                                   #
+#                                                                              #
+# **************************************************************************** #
+
+SRCS += ft_uitoa_base.c
+SRCS += ft_uiptrtoa_base.c
+
+SRCS += libarg/ft_is_flag.c
+SRCS += libarg/ft_is_specifier.c
+SRCS += libarg/ft_max_width.c
+SRCS += libarg/ft_min_width.c
+SRCS += libarg/ft_parse_specifications.c
+SRCS += libarg/ft_adjust_width.c
+SRCS += libarg/ft_vdint_conversion.c
+SRCS += libarg/ft_vdptr_conversion.c
+SRCS += libarg/ft_vdstr_conversion.c
+SRCS += libarg/ft_vduint_conversion.c
+SRCS += libarg/ft_vdconvert.c
+SRCS += libarg/ft_vdprintf.c
+SRCS += libarg/ft_vprintf.c
+
+SRCS += ft_dprintf.c
+SRCS += ft_printf.c
 
 OBJS := $(SRCS:.c=.o)
 
