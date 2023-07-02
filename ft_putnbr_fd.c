@@ -6,14 +6,14 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 16:12:05 by abenamar          #+#    #+#             */
-/*   Updated: 2022/12/09 19:37:01 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/07/02 20:31:12 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
-{	
+{
 	unsigned int	i;
 
 	i = n;
